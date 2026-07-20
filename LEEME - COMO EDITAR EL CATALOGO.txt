@@ -1,0 +1,113 @@
+════════════════════════════════════════════════════════════════
+  CORAL TURQUESA SOUVENIRS · GUÍA RÁPIDA DE EDICIÓN
+════════════════════════════════════════════════════════════════
+
+Todo el catálogo se controla desde UN SOLO archivo: productos.js
+Ábrelo con el Bloc de notas (clic derecho → Abrir con → Bloc de notas).
+No necesitas tocar index.html ni catalogo.html para nada del día a día.
+
+
+────────────────────────────────────────────────────────────────
+1) AGREGAR UN ARTÍCULO NUEVO
+────────────────────────────────────────────────────────────────
+En productos.js, dentro de la lista PRODUCTOS, copia una línea
+existente y cambia los datos. Ejemplo:
+
+  { ref: "CT-301", nombre: "Taza pintada a mano", cat: "figuras", emoji: "☕", visible: true },
+
+  · ref     → clave única del artículo (no repitas ninguna)
+  · nombre  → el nombre que verá el cliente
+  · cat     → categoría: gorras, lentes, llaveros, imanes, esferas,
+              figuras, portarretratos, papeleria, juguetes, frascos,
+              pulseras o ventiladores
+  · emoji   → se muestra mientras el artículo no tenga foto
+
+Guarda el archivo y recarga la página. Listo.
+
+
+────────────────────────────────────────────────────────────────
+2) QUITAR U OCULTAR UN ARTÍCULO (ROTACIÓN)
+────────────────────────────────────────────────────────────────
+  · Para quitarlo definitivamente: borra su línea completa.
+  · Para ocultarlo SIN borrarlo (por ejemplo, sin existencias):
+    cambia  visible: true  por  visible: false
+    Cuando vuelva a haber existencia, lo regresas a true.
+
+Si una categoría se queda sin artículos visibles, desaparece
+sola de la página (y reaparece cuando agregues artículos).
+
+
+────────────────────────────────────────────────────────────────
+3) AGREGAR LAS FOTOS DE LOS ARTÍCULOS
+────────────────────────────────────────────────────────────────
+NO se edita ningún código. Solo guarda cada foto en la carpeta
+img/ con el nombre de la clave del artículo:
+
+  img/CT-001.jpg      (también sirve .png)
+
+La página detecta la foto automáticamente y quita el letrero
+de "Foto próximamente". Recomendación: fotos cuadradas de al
+menos 800 × 800 píxeles, con buena luz.
+
+Fotos especiales:
+  · img/logo.png            → tu logo oficial (reemplaza al logo
+                              de concha en toda la página)
+  · img/personalizacion.jpg → foto de ejemplo de mercancía
+                              personalizada (sección Personalización)
+  · img/portada.jpg         → imagen para compartir en redes
+                              (hay que descomentar una línea en el
+                              <head> de cada página; está indicado ahí)
+
+
+────────────────────────────────────────────────────────────────
+4) ETIQUETAS "NUEVO" Y "★ POPULAR"
+────────────────────────────────────────────────────────────────
+Agrega al final de la línea del artículo (antes de la llave }):
+
+  , nuevo: true        → etiqueta naranja "NUEVO"
+  , destacado: true    → etiqueta azul "★ POPULAR"
+
+Úsalas con tus novedades y más vendidos reales; ayudan al
+cliente a decidir más rápido.
+
+
+────────────────────────────────────────────────────────────────
+5) CAMBIAR WHATSAPP, INSTAGRAM O CORREO
+────────────────────────────────────────────────────────────────
+Al inicio de productos.js está la sección CONFIG:
+
+  whatsapp:  "529981890854"   ← solo números, empieza con 52
+  instagram: "coralturquesa_souvenirs"
+  email:     ""               ← escribe tu correo y aparecerá
+                                 solo en la sección de Contacto
+
+Todos los botones de WhatsApp del sitio usan este número.
+
+
+────────────────────────────────────────────────────────────────
+6) CATEGORÍAS
+────────────────────────────────────────────────────────────────
+También en productos.js, en la lista CATEGORIAS puedes cambiar
+nombres, descripciones y el contador (total: "+30").
+Para crear una categoría nueva, copia una línea y usa un id
+nuevo sin espacios ni acentos (ej. "gorras"); luego usa ese id
+en el campo "cat" de tus artículos.
+
+
+────────────────────────────────────────────────────────────────
+7) TESTIMONIOS DE CLIENTES
+────────────────────────────────────────────────────────────────
+En index.html hay una sección de testimonios lista pero
+desactivada (está comentada, en la sección "Compromisos").
+Actívala únicamente con testimonios REALES y con permiso del
+cliente — inventar testimonios es publicidad engañosa.
+
+
+────────────────────────────────────────────────────────────────
+CONSEJOS FINALES
+────────────────────────────────────────────────────────────────
+· Después de editar, guarda el archivo y presiona F5 en el
+  navegador para ver los cambios.
+· Si algo se rompe, revisa que no falte una coma , o una llave }
+  en la línea que editaste.
+· Haz una copia de productos.js de vez en cuando como respaldo.

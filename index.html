@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Coral Turquesa Souvenirs | Mayorista de Souvenirs del Caribe Mexicano</title>
+  <meta name="description" content="Surte tu tienda con más de 160 souvenirs del Caribe Mexicano a precio de mayoreo. Personalización con tu marca, factura CFDI y envíos a los 32 estados. Cotiza hoy y te respondemos hoy.">
+  <meta name="theme-color" content="#01696D">
+  <meta property="og:title" content="Coral Turquesa Souvenirs | Mayoreo del Caribe Mexicano">
+  <meta property="og:description" content="Más de 160 souvenirs de alta rotación para tu tienda. Precios de mayoreo, personalización con tu marca y envíos a toda la República.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- IMPORTANTE: al publicar el sitio, cambia esta ruta por la URL completa
+       (ej. https://tudominio.com/img/portada.jpg) — las redes sociales no
+       entienden rutas relativas al generar la vista previa del enlace -->
+  <meta property="og:image" content="img/portada.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Coral Turquesa Souvenirs",
+    "description": "Mayorista de souvenirs del Caribe Mexicano para tiendas, hoteles y agencias. Personalización de mercancía y envíos a toda la República Mexicana.",
+    "areaServed": "MX",
+    "sameAs": ["https://instagram.com/coralturquesa_souvenirs"],
+    "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "telephone": "+52-998-189-0854", "availableLanguage": "es" }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LENGUAJE DE DISEÑO ─────────────────────────────────────
+       Tinta profunda + turquesa de marca + marfil cálido.
+       Sin degradados, sin brillos: líneas finas, tipografía editorial
+       (Fraunces para títulos, Archivo para interfaz) y las fotos de
+       producto como protagonistas. ─────────────────────────────── */
+    :root {
+      --ink: #16262A;
+      --teal: #01696D;
+      --teal-deep: #0C3B3E;
+      --coral: #C8502A;
+      --paper: #FFFFFF;
+      --ivory: #F6F1E7;
+      --sand: #ECE4D3;
+      --line: #DDD3BF;
+      --line-ink: rgba(22,38,42,0.14);
+      --muted: #5D6B6E;
+      --wa: #128C4A;
+      --radius: 3px;
+      --t: 0.22s ease;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Archivo', sans-serif;
+      font-size: 16px;
+      color: var(--ink);
+      line-height: 1.65;
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--coral);
+      outline-offset: 3px;
+    }
+    ::selection { background: var(--teal); color: var(--paper); }
+
+    /* ── UTILIDADES ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 5%; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--ivory); }
+    .section-navy { background: var(--teal-deep); color: var(--ivory); }
+
+    .section-header { max-width: 640px; margin: 0 auto 60px; text-align: center; }
+
+    .tag {
+      display: inline-block;
+      color: var(--coral);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .tag.coral { color: var(--coral); }
+    .section-navy .tag { color: #E9A37F; }
+
+    h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; }
+    h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); color: var(--ink); margin-bottom: 18px; }
+    .section-navy h2 { color: var(--ivory); }
+
+    p.lead { font-size: 1rem; color: var(--muted); max-width: 560px; margin: 0 auto; }
+    .section-navy p.lead { color: rgba(246,241,231,0.66); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 15px 26px;
+      border-radius: var(--radius);
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid transparent;
+      text-decoration: none;
+      transition: background var(--t), color var(--t), border-color var(--t);
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--ink); color: var(--ivory); }
+    .btn-primary:hover { background: var(--teal); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-ink); }
+    .btn-ghost:hover { border-color: var(--ink); }
+    .section-navy .btn-ghost, #inicio .btn-ghost { color: var(--ivory); border-color: rgba(246,241,231,0.4); }
+    .section-navy .btn-ghost:hover { border-color: var(--ivory); }
+    .btn-wa { background: var(--wa); color: #fff; }
+    .btn-wa:hover { background: #0E7A3F; }
+
+    .wa-ico { width: 1.25em; height: 1.25em; fill: currentColor; flex-shrink: 0; }
+
+    .micro-note { font-size: 0.78rem; color: var(--muted); margin-top: 10px; }
+    .section-navy .micro-note { color: rgba(246,241,231,0.5); }
+
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(10px);
+      height: var(--nav-h);
+      display: flex; align-items: center;
+      border-bottom: 1px solid var(--line-ink);
+    }
+    .nav-inner {
+      max-width: 1160px; width: 100%; margin: 0 auto; padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .nav-brand { text-decoration: none; display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .nav-logo {
+      position: relative; width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 50%; overflow: hidden;
+      box-shadow: 0 0 0 1px var(--line-ink);
+    }
+    .nav-logo svg { width: 100%; height: 100%; display: block; }
+    .nav-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .nav-brand-name {
+      color: var(--ink); font-family: 'Fraunces', serif;
+      font-size: 1.14rem; font-weight: 600; display: block; line-height: 1.1;
+    }
+    .nav-brand-sub {
+      color: var(--muted); font-size: 0.58rem; letter-spacing: 0.28em;
+      text-transform: uppercase; display: block; margin-top: 2px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.82rem; font-weight: 500;
+      padding: 8px 11px;
+      transition: color var(--t);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+    .nav-links .cta-link a {
+      background: var(--ink); color: var(--ivory);
+      padding: 10px 18px; border-radius: var(--radius);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      margin-left: 10px;
+      transition: background var(--t);
+    }
+    .nav-links .cta-link a:hover { background: var(--teal); }
+
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); }
+
+    .nav-mobile {
+      display: none; position: fixed;
+      top: var(--nav-h); left: 0; right: 0;
+      background: var(--paper);
+      padding: 10px 5% 18px;
+      border-bottom: 1px solid var(--line-ink);
+      z-index: 999;
+    }
+    .nav-mobile.open { display: block; }
+    .nav-mobile a {
+      display: block; color: var(--ink); text-decoration: none;
+      font-size: 0.95rem; font-weight: 500; padding: 13px 0;
+      border-bottom: 1px solid var(--line-ink);
+    }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--teal); }
+
+    /* ── HERO ── */
+    #inicio { background: var(--ivory); border-bottom: 1px solid var(--line); }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(32px, 6vw, 84px); align-items: center;
+      padding-top: 84px; padding-bottom: 72px;
+    }
+    .kicker {
+      color: var(--coral); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 22px;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 5.2vw, 3.9rem);
+      color: var(--ink); margin-bottom: 22px; font-weight: 500;
+    }
+    h1 em, h1 span { font-style: italic; color: var(--teal); font-weight: 500; }
+    .hero-sub { font-size: 1.02rem; color: var(--muted); max-width: 520px; margin-bottom: 34px; line-height: 1.75; }
+    .hero-sub strong { color: var(--ink); font-weight: 600; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+    .hero-note { font-size: 0.78rem; color: var(--muted); }
+
+    .hero-photos {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    .hero-photos figure {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      aspect-ratio: 1; overflow: hidden;
+    }
+    .hero-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-photos figure:nth-child(2) { transform: translateY(18px); }
+    .hero-photos figure:nth-child(3) { transform: translateY(-6px); }
+
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      padding-top: 26px; padding-bottom: 60px;
+      gap: 18px;
+    }
+    .stat { border-left: 1px solid var(--line); padding-left: 18px; }
+    .stat:first-child { border-left: none; padding-left: 0; }
+    .stat-n { font-family: 'Fraunces', serif; font-size: 1.9rem; font-weight: 500; color: var(--ink); line-height: 1; display: block; }
+    .stat-l { font-size: 0.66rem; color: var(--muted); margin-top: 7px; text-transform: uppercase; letter-spacing: 0.12em; display: block; }
+    .stat-div { display: none; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 10px 14px; margin-bottom: 64px;
+    }
+    .trust-item {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--ink);
+      border: 1px solid var(--line-ink);
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      background: var(--paper);
+    }
+    .trust-item span { font-size: 15px; }
+
+    /* ── VALUE PROPS ── */
+    .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0; }
+    .value-card {
+      padding: 6px 26px 6px;
+      border-left: 1px solid var(--line-ink);
+    }
+    .value-card:first-child { border-left: none; padding-left: 0; }
+    .value-icon { font-size: 21px; margin-bottom: 16px; }
+    .value-card h3 { font-family: 'Archivo', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 9px; }
+    .value-card p { font-size: 0.87rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── CATÁLOGO (vista previa) ── */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+      gap: 14px; margin-bottom: 44px;
+    }
+    .cat-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none; display: block;
+      transition: border-color var(--t);
+    }
+    .cat-card:hover { border-color: var(--ink); }
+    .cat-img {
+      width: 100%; aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 40px; position: relative;
+      background-size: cover; background-position: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8 { background-color: var(--sand); }
+    .cat-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .cat-info { padding: 14px 16px 16px; }
+    .cat-info h4 { font-family: 'Archivo', sans-serif; font-size: 0.88rem; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+    .cat-info p { font-size: 0.76rem; color: var(--muted); }
+    .catalog-cta {
+      text-align: center;
+      background: var(--ivory);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 46px 24px;
+    }
+    .catalog-cta h3 { font-size: 1.45rem; color: var(--ink); margin-bottom: 10px; }
+    .catalog-cta p { color: var(--muted); margin-bottom: 26px; font-size: 0.92rem; }
+    .catalog-cta .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── PROCESO ── */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; }
+    .step {
+      text-align: left; padding: 8px 26px 8px;
+      border-left: 1px solid rgba(246,241,231,0.16);
+    }
+    .step:first-child { border-left: none; padding-left: 0; }
+    .step-n {
+      width: auto; height: auto; background: none; box-shadow: none; border-radius: 0;
+      display: block; margin: 0 0 14px;
+      font-family: 'Fraunces', serif; font-size: 2.1rem; font-weight: 400;
+      color: #E9A37F; line-height: 1;
+    }
+    .step h4 { font-family: 'Archivo', sans-serif; font-size: 0.92rem; font-weight: 700; color: var(--ivory); margin-bottom: 9px; }
+    .step p { font-size: 0.84rem; color: rgba(246,241,231,0.6); line-height: 1.7; }
+
+    /* ── PERSONALIZACIÓN ── */
+    .custom-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .custom-text h2 { margin-bottom: 16px; }
+    .custom-text > p { color: var(--muted); margin-bottom: 26px; line-height: 1.75; }
+    .custom-features { display: flex; flex-direction: column; gap: 0; margin-bottom: 32px; }
+    .cf { display: flex; align-items: flex-start; gap: 14px; padding: 13px 0; border-top: 1px solid var(--line-ink); }
+    .cf:last-child { border-bottom: 1px solid var(--line-ink); }
+    .cf-icon {
+      width: 34px; height: 34px; background: var(--ivory);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; flex-shrink: 0;
+    }
+    .cf h4 { font-family: 'Archivo', sans-serif; font-size: 0.88rem; font-weight: 700; color: var(--ink); margin-bottom: 1px; }
+    .cf p { font-size: 0.8rem; color: var(--muted); }
+    .custom-visual {
+      background: var(--ivory);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .custom-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .custom-visual-inner { text-align: center; padding: 40px; }
+    .custom-visual-inner span { font-size: 46px; display: block; margin-bottom: 14px; }
+    .custom-visual-inner p { font-size: 0.84rem; color: var(--muted); font-style: italic; }
+
+    /* ── NOSOTROS ── */
+    .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-visual {
+      background: var(--teal-deep);
+      border-radius: var(--radius);
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ig-badge {
+      background: transparent;
+      border: 1px solid rgba(246,241,231,0.28);
+      border-radius: var(--radius);
+      padding: 26px 34px; text-align: center; text-decoration: none; display: block;
+      transition: border-color var(--t), background var(--t);
+    }
+    .ig-badge:hover { border-color: var(--ivory); background: rgba(246,241,231,0.05); }
+    .ig-badge-icon { font-size: 30px; display: block; margin-bottom: 10px; }
+    .ig-handle { color: var(--ivory); font-size: 1.05rem; font-weight: 500; font-family: 'Fraunces', serif; }
+    .ig-sub { color: rgba(246,241,231,0.55); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 6px; display: block; }
+    .about-text h2 { margin-bottom: 16px; }
+    .about-text p { color: var(--muted); line-height: 1.8; margin-bottom: 16px; font-size: 0.95rem; }
+    .about-text p strong { color: var(--ink); }
+    .about-values { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 28px; border-top: 1px solid var(--line-ink); }
+    .av { text-align: left; padding: 16px 14px 0 0; }
+    .av span { font-size: 20px; display: block; margin-bottom: 6px; }
+    .av h4 { font-family: 'Archivo', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+
+    /* ── COMPROMISOS ── */
+    .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .promise-card {
+      background: var(--paper);
+      border: 1px solid var(--line-ink);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+    }
+    .promise-card:nth-child(1) { border-top: 3px solid var(--teal); }
+    .promise-card:nth-child(2) { border-top: 3px solid var(--coral); }
+    .promise-card:nth-child(3) { border-top: 3px solid var(--ink); }
+    .promise-icon { font-size: 24px; margin-bottom: 14px; display: block; }
+    .promise-card h3 { font-family: 'Archivo', sans-serif; font-size: 0.98rem; font-weight: 700; color: var(--ink); margin-bottom: 9px; }
+    .promise-card p { font-size: 0.87rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 760px; margin: 0 auto; border-top: 1px solid var(--line); }
+    .faq-item { background: transparent; border-bottom: 1px solid var(--line); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none;
+      padding: 20px 4px;
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      cursor: pointer;
+      font-family: 'Archivo', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--ink);
+      transition: color var(--t);
+    }
+    .faq-q:hover { color: var(--teal); }
+    .faq-ic {
+      width: 26px; height: 26px; border-radius: var(--radius);
+      border: 1px solid var(--line-ink);
+      background: transparent; color: var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 400; flex-shrink: 0;
+      transition: transform var(--t), background var(--t), color var(--t);
+    }
+    .faq-item.open .faq-ic { transform: rotate(45deg); background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+    .faq-a { display: none; padding: 0 40px 22px 4px; font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CONTACTO ── */
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .contact-info h3 { font-size: 1.5rem; color: var(--ivory); margin-bottom: 14px; }
+    .contact-info > p { color: rgba(246,241,231,0.65); margin-bottom: 28px; line-height: 1.7; font-size: 0.94rem; }
+    .channels { display: flex; flex-direction: column; gap: 0; margin-top: 30px; }
+    .channel {
+      display: flex; align-items: center; gap: 14px;
+      color: rgba(246,241,231,0.85); text-decoration: none;
+      padding: 14px 0;
+      border-top: 1px solid rgba(246,241,231,0.14);
+      transition: color var(--t);
+    }
+    .channel:hover { color: var(--ivory); }
+    .ch-icon {
+      width: 40px; height: 40px; border-radius: var(--radius);
+      border: 1px solid rgba(246,241,231,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; flex-shrink: 0;
+    }
+    .ch-wa { color: #7ADE9F; }
+    .ch-wa .wa-ico { width: 20px; height: 20px; }
+    .ch-label { font-size: 0.62rem; color: rgba(246,241,231,0.45); text-transform: uppercase; letter-spacing: 0.16em; display: block; }
+    .ch-val { font-size: 0.92rem; font-weight: 600; display: block; }
+    .contact-form {
+      background: transparent;
+      border: 1px solid rgba(246,241,231,0.18);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .contact-form h3 { font-size: 1.15rem; color: var(--ivory); margin-bottom: 24px; }
+    .fg { margin-bottom: 16px; }
+    .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .fg label {
+      display: block; font-size: 0.64rem; font-weight: 700;
+      color: rgba(246,241,231,0.55);
+      text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 7px;
+    }
+    .fg input, .fg textarea, .fg select {
+      width: 100%;
+      background: rgba(246,241,231,0.05);
+      border: 1px solid rgba(246,241,231,0.2);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      color: var(--ivory);
+      font-family: 'Archivo', sans-serif; font-size: 0.9rem;
+      outline: none;
+      transition: border-color var(--t);
+    }
+    .fg input::placeholder, .fg textarea::placeholder { color: rgba(246,241,231,0.3); }
+    .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--ivory); }
+    .fg select option { background: var(--teal-deep); color: var(--ivory); }
+    .fg textarea { resize: vertical; min-height: 95px; }
+    .form-submit { width: 100%; background: var(--ivory); color: var(--ink); }
+    .form-submit:hover { background: var(--paper); }
+    .form-note { text-align: center; font-size: 0.72rem; color: rgba(246,241,231,0.45); margin-top: 12px; }
+    .form-note a { color: rgba(246,241,231,0.7); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); color: rgba(246,241,231,0.55); padding: 60px 0 26px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 44px; margin-bottom: 48px; }
+    .footer-brand-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .footer-logo { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 0 1px rgba(246,241,231,0.2); position: relative; }
+    .footer-logo svg { width: 100%; height: 100%; display: block; }
+    .footer-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .footer-brand h3 { font-size: 1.2rem; color: var(--ivory); font-weight: 500; }
+    .footer-brand p { font-size: 0.84rem; line-height: 1.7; max-width: 290px; }
+    .ig-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(246,241,231,0.7); text-decoration: none;
+      font-size: 0.8rem; margin-top: 16px;
+      border: 1px solid rgba(246,241,231,0.18);
+      padding: 8px 13px; border-radius: var(--radius);
+      transition: border-color var(--t), color var(--t);
+    }
+    .ig-link:hover { border-color: rgba(246,241,231,0.5); color: var(--ivory); }
+    .footer-col h4 {
+      font-family: 'Archivo', sans-serif; font-size: 0.64rem; font-weight: 700;
+      color: var(--ivory); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col a { color: rgba(246,241,231,0.5); text-decoration: none; font-size: 0.84rem; transition: color var(--t); }
+    .footer-col a:hover { color: var(--ivory); }
+    .footer-bottom {
+      border-top: 1px solid rgba(246,241,231,0.12);
+      padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.75rem; }
+
+    /* ── MODALES ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(22,38,42,0.68);
+      z-index: 2000; align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--paper);
+      border-radius: var(--radius);
+      padding: 40px;
+      max-width: 660px; width: 100%;
+      max-height: 85vh; overflow-y: auto; position: relative;
+    }
+    .modal-close {
+      position: absolute; top: 14px; right: 14px;
+      width: 32px; height: 32px; border-radius: var(--radius);
+      background: transparent; border: 1px solid var(--line-ink); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--muted);
+      transition: background var(--t), color var(--t);
+    }
+    .modal-close:hover { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+    .modal h2 { font-size: 1.6rem; margin-bottom: 20px; color: var(--ink); }
+    .modal h3 { font-family: 'Archivo', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--ink); margin: 22px 0 7px; }
+    .modal p { font-size: 0.87rem; color: var(--muted); line-height: 1.75; margin-bottom: 10px; }
+
+    .legal-links { display: flex; flex-direction: column; gap: 10px; }
+    .legal-link-card {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px;
+      background: var(--ivory);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      cursor: pointer; text-align: left; width: 100%;
+      transition: border-color var(--t);
+      font-family: 'Archivo', sans-serif;
+    }
+    .legal-link-card:hover { border-color: var(--ink); }
+    .legal-link-card span { font-size: 21px; }
+    .legal-link-card div h4 { font-size: 0.9rem; font-weight: 700; color: var(--ink); }
+    .legal-link-card div p { font-size: 0.78rem; color: var(--muted); margin-bottom: 0; }
+
+    /* ── WHATSAPP FAB ── */
+    .wa-fab {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 54px; height: 54px;
+      background: var(--wa); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 22px rgba(22,38,42,0.28);
+      z-index: 500; text-decoration: none; color: #fff;
+      transition: transform var(--t);
+    }
+    .wa-fab:hover { transform: scale(1.07); }
+    .wa-fab .wa-ico { width: 27px; height: 27px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .custom-layout, .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-grid { grid-template-columns: 1fr; gap: 44px; }
+      .hero-photos figure:nth-child(2), .hero-photos figure:nth-child(3) { transform: none; }
+      .value-grid { gap: 26px 0; }
+      .value-card { border-left: none; padding-left: 0; border-top: 1px solid var(--line-ink); padding-top: 22px; }
+      .value-card:first-child { border-top: none; padding-top: 0; }
+      .steps-grid { gap: 26px 0; }
+      .step { border-left: none; padding-left: 0; border-top: 1px solid rgba(246,241,231,0.16); padding-top: 22px; }
+      .step:first-child { border-top: none; padding-top: 0; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-logo { width: 40px; height: 40px; }
+      .nav-brand-name { font-size: 1rem; }
+      .hero-grid { padding-top: 56px; padding-bottom: 48px; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 20px 14px; padding-bottom: 48px; }
+      .stat:nth-child(odd) { border-left: none; padding-left: 0; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { justify-content: center; text-align: center; }
+      .fg-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2.2rem; }
+      .hero-btns { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
+      .catalog-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .about-values { grid-template-columns: 1fr 1fr 1fr; }
+      .contact-form { padding: 24px 18px; }
+      .modal { padding: 26px 20px; }
+      .trust-bar { gap: 8px; }
+      .trust-item { font-size: 0.64rem; padding: 8px 12px; }
+      .hero-photos { gap: 10px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+      .fade-in { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo oficial de WhatsApp (se reutiliza en todos los botones con <use href="#waIcon">) -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <symbol id="waIcon" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </symbol>
+  </svg>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-brand" aria-label="Coral Turquesa Souvenirs — Inicio">
+        <span class="nav-logo">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="ctgNav" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#14B8B8"/><stop offset="0.55" stop-color="#0D7377"/><stop offset="1" stop-color="#FF6B47"/>
+              </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="30" fill="url(#ctgNav)"/>
+            <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 50 L15 33 Q12 24 17.5 17.5 Q23 11.5 32 11 Q41 11.5 46.5 17.5 Q52 24 49 33 Z" fill="rgba(255,255,255,0.16)"/>
+              <path d="M32 50 L17.5 17.5"/><path d="M32 50 L32 11"/><path d="M32 50 L46.5 17.5"/>
+            </g>
+          </svg>
+          <!-- Si guardas tu logo oficial como img/logo.png, aparecerá aquí automáticamente -->
+          <img src="img/logo.png" alt="" onerror="this.remove()">
+        </span>
+        <span>
+          <span class="nav-brand-name">Coral Turquesa</span>
+          <span class="nav-brand-sub">Souvenirs · Mayoreo</span>
+        </span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="#personalizacion">Personalización</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#faq">Preguntas Frecuentes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#" onclick="openModal('legal');return false;">Legal</a></li>
+        <li class="cta-link"><a href="https://wa.me/529981890854" data-wa="Hola, me interesa hacer un pedido mayorista." target="_blank" rel="noopener">Cotizar</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#inicio"          onclick="closeNav()">Inicio</a>
+    <a href="catalogo.html"    onclick="closeNav()">Catálogo</a>
+    <a href="#personalizacion" onclick="closeNav()">Personalización</a>
+    <a href="#nosotros"        onclick="closeNav()">Nosotros</a>
+    <a href="#faq"             onclick="closeNav()">Preguntas Frecuentes</a>
+    <a href="#contacto"        onclick="closeNav()">Contacto</a>
+    <a href="#"                onclick="closeNav();openModal('legal');return false;">Legal</a>
+    <a href="https://wa.me/529981890854" data-wa="Hola, me interesa hacer un pedido mayorista." target="_blank" rel="noopener" style="color:#128C4A;font-weight:700;margin-top:6px;"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg> Cotizar por WhatsApp</a>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Mayoreo directo del Caribe Mexicano</p>
+        <h1>Souvenirs del Caribe que <em>se venden solos</em></h1>
+        <p class="hero-sub">
+          Surte tu tienda con más de 160 artículos de alta rotación, con margen real de mayoreo,
+          personalización con tu marca y envíos a los 32 estados. <strong>Cotizas hoy, te respondemos hoy.</strong>
+        </p>
+        <div class="hero-btns">
+          <a href="catalogo.html" class="btn btn-primary">Ver catálogo completo</a>
+          <a href="https://wa.me/529981890854" data-wa="Hola, tengo una tienda y me interesa recibir el catálogo con precios de mayoreo." target="_blank" rel="noopener" class="btn btn-wa"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg> Precios por WhatsApp</a>
+        </div>
+        <p class="hero-note">Sin compromiso · Atención directa, sin intermediarios</p>
+      </div>
+      <div class="hero-photos" aria-hidden="true">
+        <figure><img src="img/CT-052.jpg" alt="" loading="eager"></figure>
+        <figure><img src="img/CT-162.jpg" alt=""></figure>
+        <figure><img src="img/CT-104.jpg" alt=""></figure>
+        <figure><img src="img/CT-133.jpg" alt=""></figure>
+      </div>
+    </div>
+    <div class="container hero-stats">
+      <div class="stat"><span class="stat-n">+160</span><span class="stat-l">Artículos de alta rotación</span></div>
+      <div class="stat"><span class="stat-n">32</span><span class="stat-l">Estados con envío</span></div>
+      <div class="stat"><span class="stat-n">Hoy</span><span class="stat-l">Respuesta a cotizaciones</span></div>
+      <div class="stat"><span class="stat-n">CFDI</span><span class="stat-l">Facturación disponible</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONFIANZA + BENEFICIOS ═══════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="trust-bar fade-in">
+        <div class="trust-item"><span>✅</span> Pedido mínimo accesible</div>
+        <div class="trust-item"><span>🧾</span> Factura CFDI</div>
+        <div class="trust-item"><span>📦</span> Envío con rastreo</div>
+        <div class="trust-item"><span>⚡</span> Respuesta el mismo día</div>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card fade-in">
+          <div class="value-icon">🔄</div>
+          <h3>Alta rotación comprobada</h3>
+          <p>Seleccionamos artículos que se venden rápido en zonas turísticas, para que recuperes tu inversión en menos tiempo.</p>
+        </div>
+        <div class="value-card fade-in">
+          <div class="value-icon">💰</div>
+          <h3>Margen real de mayoreo</h3>
+          <p>Compras directo al mayorista, sin intermediarios: más utilidad por pieza para tu tienda, hotel o agencia.</p>
+        </div>
+        <div class="value-card fade-in">
+          <div class="value-icon">⚡</div>
+          <h3>Reabastece en minutos</h3>
+          <p>¿Se te agotó un artículo? Repón por WhatsApp con tu lista guardada y te confirmamos disponibilidad el mismo día.</p>
+        </div>
+        <div class="value-card fade-in">
+          <div class="value-icon">✍️</div>
+          <h3>Tu marca en cada pieza</h3>
+          <p>Personalizamos con tu logo, nombre y colores: convierte cada souvenir en publicidad permanente de tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CATÁLOGO (VISTA PREVIA) ═══════════════ -->
+  <section id="catalogo" class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="tag">Catálogo</div>
+        <h2>Elige por categoría, cotiza en un clic</h2>
+        <p class="lead">12 categorías y más de 160 artículos del Caribe Mexicano. Entra, arma tu lista y recibe precios de mayoreo hoy mismo.</p>
+      </div>
+
+      <div class="catalog-grid">
+        <a href="catalogo.html#gorras" class="cat-card fade-in">
+          <div class="cat-img c1" style="background-image:url('img/CT-052.jpg');background-size:cover;background-position:center"><span class="cat-badge">52 artículos</span></div>
+          <div class="cat-info"><h4>Gorras y Sombreros</h4><p>Clásicas, trucker y de pescador</p></div>
+        </a>
+        <a href="catalogo.html#lentes" class="cat-card fade-in">
+          <div class="cat-img c2" style="background-image:url('img/CT-104.jpg');background-size:cover;background-position:center"><span class="cat-badge">7 artículos</span></div>
+          <div class="cat-info"><h4>Lentes de Sol</h4><p>Colores de moda listos para exhibir</p></div>
+        </a>
+        <a href="catalogo.html#llaveros" class="cat-card fade-in">
+          <div class="cat-img c3" style="background-image:url('img/CT-133.jpg');background-size:cover;background-position:center"><span class="cat-badge">13 artículos</span></div>
+          <div class="cat-info"><h4>Llaveros</h4><p>Destapadores, corazones y tortugas</p></div>
+        </a>
+        <a href="catalogo.html#imanes" class="cat-card fade-in">
+          <div class="cat-img c4" style="background-image:url('img/CT-156.jpg');background-size:cover;background-position:center"><span class="cat-badge">19 artículos</span></div>
+          <div class="cat-info"><h4>Imanes</h4><p>Cancún, Costa Maya y México</p></div>
+        </a>
+        <a href="catalogo.html#esferas" class="cat-card fade-in">
+          <div class="cat-img c5" style="background-image:url('img/CT-162.jpg');background-size:cover;background-position:center"><span class="cat-badge">14 artículos</span></div>
+          <div class="cat-info"><h4>Esferas de Nieve</h4><p>Tortugas y delfines del Caribe</p></div>
+        </a>
+        <a href="catalogo.html#figuras" class="cat-card fade-in">
+          <div class="cat-img c6" style="background-image:url('img/CT-191.jpg');background-size:cover;background-position:center"><span class="cat-badge">13 artículos</span></div>
+          <div class="cat-info"><h4>Figuras y Decoración</h4><p>Barcos, faros y delfines decorativos</p></div>
+        </a>
+        <a href="catalogo.html#portarretratos" class="cat-card fade-in">
+          <div class="cat-img c7" style="background-image:url('img/CT-204.jpg');background-size:cover;background-position:center"><span class="cat-badge">6 artículos</span></div>
+          <div class="cat-info"><h4>Portarretratos</h4><p>Marcos artesanales de playa</p></div>
+        </a>
+        <a href="catalogo.html#papeleria" class="cat-card fade-in">
+          <div class="cat-img c8" style="background-image:url('img/CT-218.jpg');background-size:cover;background-position:center"><span class="cat-badge">14 artículos</span></div>
+          <div class="cat-info"><h4>Papelería</h4><p>Plumas con dijes y sets infantiles</p></div>
+        </a>
+        <a href="catalogo.html#juguetes" class="cat-card fade-in">
+          <div class="cat-img c1" style="background-image:url('img/CT-235.jpg');background-size:cover;background-position:center"><span class="cat-badge">11 artículos</span></div>
+          <div class="cat-info"><h4>Juguetes y Juegos</h4><p>Juegos de agua y rompecabezas</p></div>
+        </a>
+        <a href="catalogo.html#frascos" class="cat-card fade-in">
+          <div class="cat-img c2" style="background-image:url('img/CT-254.jpg');background-size:cover;background-position:center"><span class="cat-badge">6 artículos</span></div>
+          <div class="cat-info"><h4>Frascos y Alhajeros</h4><p>Conchas, arena y cajitas de madera</p></div>
+        </a>
+        <a href="catalogo.html#pulseras" class="cat-card fade-in">
+          <div class="cat-img c3" style="background-image:url('img/CT-261.jpg');background-size:cover;background-position:center"><span class="cat-badge">3 artículos</span></div>
+          <div class="cat-info"><h4>Pulseras</h4><p>Displays de 12 piezas para mostrador</p></div>
+        </a>
+        <a href="catalogo.html#ventiladores" class="cat-card fade-in">
+          <div class="cat-img c4" style="background-image:url('img/CT-273.jpg');background-size:cover;background-position:center"><span class="cat-badge">4 artículos</span></div>
+          <div class="cat-info"><h4>Ventiladores y Abanicos</h4><p>De mano, recargables y de madera</p></div>
+        </a>
+      </div>
+
+      <div class="catalog-cta fade-in">
+        <h3>Recibe el catálogo completo con precios hoy mismo</h3>
+        <p>Más de 160 artículos con precio de mayoreo. Pídelo por WhatsApp o explóralo en línea y arma tu lista de cotización.</p>
+        <div class="cta-row">
+          <a href="catalogo.html" class="btn btn-primary">Ver Catálogo en Línea</a>
+          <a href="https://wa.me/529981890854" data-wa="Hola, ¿me pueden enviar el catálogo completo con precios de mayoreo?" target="_blank" rel="noopener" class="btn btn-wa"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg> Pedirlo por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CÓMO FUNCIONA ═══════════════ -->
+  <section class="section section-navy">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="tag coral">Proceso</div>
+        <h2>Tu primer pedido en 4 pasos</h2>
+        <p class="lead">Simple, rápido y sin complicaciones: de la lista al mostrador de tu tienda.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step fade-in">
+          <div class="step-n">1</div>
+          <h4>Elige tus artículos</h4>
+          <p>Explora el catálogo y arma tu lista con un clic. Si apenas empiezas, te asesoramos con el surtido ideal para tu zona.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-n">2</div>
+          <h4>Recibe tu cotización</h4>
+          <p>Envíala por WhatsApp y el mismo día te respondemos con precios de mayoreo, disponibilidad y costo de envío.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-n">3</div>
+          <h4>Confirma y paga</h4>
+          <p>Aceptas la cotización y realizas el pago. Emitimos tu factura CFDI si la necesitas.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-n">4</div>
+          <h4>Recibe en tu negocio</h4>
+          <p>Empacamos con cuidado y enviamos a cualquier estado con número de rastreo hasta tu puerta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PERSONALIZACIÓN ═══════════════ -->
+  <section id="personalizacion" class="section">
+    <div class="container">
+      <div class="custom-layout">
+        <div class="custom-text fade-in">
+          <div class="tag">Personalización</div>
+          <h2>Mercancía con tu<br>identidad de marca</h2>
+          <p>Convierte nuestros artículos en herramientas de marketing para tu negocio. Logo, nombre, colores — tú decides.</p>
+          <div class="custom-features">
+            <div class="cf">
+              <div class="cf-icon">🏷️</div>
+              <div><h4>Logo y nombre de tu marca</h4><p>Bordado, impresión o grabado según el artículo.</p></div>
+            </div>
+            <div class="cf">
+              <div class="cf-icon">🎨</div>
+              <div><h4>Colores corporativos</h4><p>Adaptamos la colorimetría a tu manual de identidad.</p></div>
+            </div>
+            <div class="cf">
+              <div class="cf-icon">📦</div>
+              <div><h4>Empaque personalizado</h4><p>Packaging con tu branding para una presentación profesional.</p></div>
+            </div>
+            <div class="cf">
+              <div class="cf-icon">🏨</div>
+              <div><h4>Pedidos corporativos</h4><p>Ideal para hoteles, aerolíneas, agencias y eventos.</p></div>
+            </div>
+          </div>
+          <a href="https://wa.me/529981890854" data-wa="Hola, me interesa la personalización de mercancía con mi marca." target="_blank" rel="noopener" class="btn btn-primary">Quiero Personalizar</a>
+        </div>
+
+        <div class="custom-visual fade-in">
+          <!-- Guarda una foto de ejemplo como img/personalizacion.jpg y aparecerá aquí automáticamente -->
+          <img src="img/personalizacion.jpg" alt="Ejemplo de mercancía personalizada" onerror="this.remove()">
+          <div class="custom-visual-inner">
+            <span aria-hidden="true">🎨</span>
+            <p>Aquí irán ejemplos reales<br>de mercancía personalizada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ NOSOTROS ═══════════════ -->
+  <section id="nosotros" class="section section-alt">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-visual fade-in">
+          <a href="https://instagram.com/coralturquesa_souvenirs" target="_blank" rel="noopener" class="ig-badge">
+            <span class="ig-badge-icon">📸</span>
+            <span class="ig-handle">@coralturquesa_souvenirs</span>
+            <span class="ig-sub">Síguenos en Instagram</span>
+          </a>
+        </div>
+
+        <div class="about-text fade-in">
+          <div class="tag">Nosotros</div>
+          <h2>Nacidos en el<br>Caribe Mexicano</h2>
+          <p>Somos <strong>Coral Turquesa Souvenirs</strong>, una empresa mayorista con raíces en el Caribe Mexicano. Vivimos el mercado turístico todos los días: sabemos qué compra el turista, en qué temporada y a qué precio.</p>
+          <p>Ese conocimiento lo ponemos al servicio de tiendas de souvenirs, hoteles, agencias de viaje y revendedores de toda la República, para que tu negocio tenga los artículos correctos, al precio correcto y en el momento correcto.</p>
+          <div class="about-values">
+            <div class="av"><span>⭐</span><h4>Calidad</h4></div>
+            <div class="av"><span>🤝</span><h4>Compromiso</h4></div>
+            <div class="av"><span>🌊</span><h4>Autenticidad</h4></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ COMPROMISOS ═══════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="tag coral">Sin riesgo</div>
+        <h2>Compra tranquila para tu negocio</h2>
+        <p class="lead">Sabemos que cada peso de tu inventario cuenta. Por eso trabajamos con reglas claras desde el primer mensaje.</p>
+      </div>
+      <div class="promise-grid">
+        <div class="promise-card fade-in">
+          <span class="promise-icon">⚡</span>
+          <h3>Respuesta el mismo día</h3>
+          <p>Toda cotización enviada por WhatsApp se responde el mismo día con precios, disponibilidad y costo de envío. Sin dejarte esperando.</p>
+        </div>
+        <div class="promise-card fade-in">
+          <span class="promise-icon">📦</span>
+          <h3>Empaque seguro y rastreo</h3>
+          <p>Cada pedido viaja protegido y con número de guía. Sigues tu mercancía desde nuestro almacén hasta la puerta de tu tienda.</p>
+        </div>
+        <div class="promise-card fade-in">
+          <span class="promise-icon">🛡️</span>
+          <h3>Garantía por defecto</h3>
+          <p>Si una pieza llega con defecto de fabricación o hubo un error en tu pedido, la reponemos. Tienes 5 días hábiles para reportarlo.</p>
+        </div>
+      </div>
+
+      <!-- ══ TESTIMONIOS (activar cuando tengas testimonios REALES de clientes) ══
+           Importante: usa solo testimonios auténticos y con permiso del cliente;
+           inventarlos es publicidad engañosa. Para activarlos, quita los signos
+           de comentario (los símbolos de arriba y abajo) y llena los datos.
+
+      <div class="promise-grid" style="margin-top:22px;">
+        <div class="promise-card fade-in">
+          <span class="promise-icon">💬</span>
+          <p style="font-style:italic;">"[Testimonio real del cliente]"</p>
+          <h3 style="margin-top:12px;">[Nombre] — [Tienda, Ciudad]</h3>
+        </div>
+        <div class="promise-card fade-in">
+          <span class="promise-icon">💬</span>
+          <p style="font-style:italic;">"[Testimonio real del cliente]"</p>
+          <h3 style="margin-top:12px;">[Nombre] — [Tienda, Ciudad]</h3>
+        </div>
+        <div class="promise-card fade-in">
+          <span class="promise-icon">💬</span>
+          <p style="font-style:italic;">"[Testimonio real del cliente]"</p>
+          <h3 style="margin-top:12px;">[Nombre] — [Tienda, Ciudad]</h3>
+        </div>
+      </div>
+      ══════════════════════════════════════════════════════════════ -->
+    </div>
+  </section>
+
+  <!-- ═══════════════ FAQ ═══════════════ -->
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="tag">Preguntas Frecuentes</div>
+        <h2>Todo lo que necesitas saber</h2>
+        <p class="lead">Resolvemos las dudas más comunes antes de que las tengas.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            ¿Cuál es el pedido mínimo para mayoreo?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Manejamos pedidos mínimos accesibles para todo tipo de negocio, desde tiendas pequeñas hasta cadenas hoteleras. Escríbenos por WhatsApp y te confirmamos las condiciones del artículo que te interese.</div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Apenas voy a abrir mi tienda, ¿puedo comprar?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">¡Claro! De hecho nos encanta acompañar negocios que empiezan. Te asesoramos sin costo sobre el surtido inicial ideal según tu zona, tu tipo de cliente y tu presupuesto, para que tu primera inversión rote rápido.</div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            ¿Realizan envíos a toda la República Mexicana?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Sí, enviamos a los 32 estados mediante paqueterías certificadas y con número de rastreo. El costo y tiempo de entrega varían según destino y peso; te cotizamos el flete junto con tu pedido.</div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            ¿Puedo personalizar los artículos con mi logo o marca?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Sí. Podemos incluir tu logo, nombre de marca, colores corporativos y empaque personalizado en la mayoría de nuestros artículos. Consulta disponibilidad según el artículo específico.</div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            ¿Cuánto tiempo tarda la producción y entrega?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Para artículos en existencia sin personalización, el envío se realiza en 1–3 días hábiles. Para pedidos con personalización, la producción toma de 7 a 15 días hábiles adicionales según cantidad y complejidad.</div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            ¿Qué formas de pago aceptan?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Transferencia bancaria (SPEI) y depósito. Al confirmar tu cotización te enviamos los datos de pago junto con el resumen de tu pedido, y tu pedido queda firme al acreditarse el pago.</div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            ¿Emiten facturas?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Sí, emitimos CFDI para todos nuestros pedidos. Solo necesitamos tus datos fiscales al momento de confirmar.</div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            ¿Cómo hago mi primer pedido?
+            <span class="faq-ic" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">1) Explora el catálogo y arma tu lista con «+ Agregar». 2) Envíala por WhatsApp con un clic. 3) El mismo día recibes cotización con precios y disponibilidad. 4) Confirmas, pagas y te enviamos tu pedido con número de rastreo.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACTO ═══════════════ -->
+  <section id="contacto" class="section section-navy">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="tag coral">Contacto</div>
+        <h2>Hablemos de tu negocio</h2>
+        <p class="lead">Estamos listos para atenderte. Te respondemos el mismo día.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info fade-in">
+          <h3>Nuestro canal principal es WhatsApp</h3>
+          <p>Ahí resolvemos dudas, enviamos el catálogo con precios y atendemos cotizaciones en tiempo real. También puedes dejarnos un mensaje en el formulario.</p>
+          <div style="margin-bottom:28px;">
+            <a href="https://wa.me/529981890854" data-wa="Hola, me interesa hacer un pedido mayorista." target="_blank" rel="noopener" class="btn btn-wa"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg> Abrir WhatsApp</a>
+          </div>
+          <div class="channels">
+            <a href="https://wa.me/529981890854" data-wa="" target="_blank" rel="noopener" class="channel">
+              <div class="ch-icon ch-wa"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg></div>
+              <div><span class="ch-label">WhatsApp</span><span class="ch-val">+52 998 189 0854</span></div>
+            </a>
+            <a href="https://instagram.com/coralturquesa_souvenirs" target="_blank" rel="noopener" class="channel">
+              <div class="ch-icon ch-ig">📸</div>
+              <div><span class="ch-label">Instagram</span><span class="ch-val">@coralturquesa_souvenirs</span></div>
+            </a>
+            <!-- El correo se muestra automáticamente cuando lo escribas en productos.js (CONFIG.email) -->
+            <a href="#" class="channel" id="emailChannel" style="display:none;">
+              <div class="ch-icon ch-em">✉️</div>
+              <div><span class="ch-label">Email</span><span class="ch-val" id="emailValue"></span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form fade-in">
+          <h3>Envíanos un mensaje</h3>
+          <form onsubmit="handleForm(event)">
+            <div class="fg">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" type="text" name="nombre" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="fg">
+              <label for="f-empresa">Empresa / Negocio</label>
+              <input id="f-empresa" type="text" name="empresa" placeholder="Nombre de tu negocio">
+            </div>
+            <div class="fg fg-row">
+              <div>
+                <label for="f-tel">WhatsApp</label>
+                <input id="f-tel" type="tel" name="tel" placeholder="+52 000 000 0000" required>
+              </div>
+              <div>
+                <label for="f-ciudad">Ciudad / Estado</label>
+                <input id="f-ciudad" type="text" name="ciudad" placeholder="Ej. Mérida, Yucatán">
+              </div>
+            </div>
+            <div class="fg">
+              <label for="f-interes">Me interesa</label>
+              <select id="f-interes" name="interes">
+                <option value="">Selecciona una opción</option>
+                <option>Catálogo completo con precios</option>
+                <option>Cotización de artículos específicos</option>
+                <option>Personalización de mercancía</option>
+                <option>Pedido corporativo</option>
+                <option>Asesoría para tienda nueva</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="f-mensaje">Mensaje</label>
+              <textarea id="f-mensaje" name="mensaje" placeholder="Cuéntanos sobre tu negocio y qué necesitas..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">Enviar Mensaje por WhatsApp</button>
+            <p class="form-note">Sin compromiso · Al enviar aceptas nuestro <a href="#" onclick="openModal('privacidad');return false;">Aviso de Privacidad</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-head">
+            <span class="footer-logo">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ctgFoot" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#14B8B8"/><stop offset="0.55" stop-color="#0D7377"/><stop offset="1" stop-color="#FF6B47"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="32" cy="32" r="30" fill="url(#ctgFoot)"/>
+                <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 50 L15 33 Q12 24 17.5 17.5 Q23 11.5 32 11 Q41 11.5 46.5 17.5 Q52 24 49 33 Z" fill="rgba(255,255,255,0.16)"/>
+                  <path d="M32 50 L17.5 17.5"/><path d="M32 50 L32 11"/><path d="M32 50 L46.5 17.5"/>
+                </g>
+              </svg>
+              <img src="img/logo.png" alt="" onerror="this.remove()">
+            </span>
+            <h3>Coral Turquesa Souvenirs</h3>
+          </div>
+          <p>Mayoristas de souvenirs del Caribe Mexicano. Más de 160 artículos únicos, personalización con tu marca y envíos a toda la República.</p>
+          <a href="https://instagram.com/coralturquesa_souvenirs" target="_blank" rel="noopener" class="ig-link">📸 @coralturquesa_souvenirs</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="#personalizacion">Personalización</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#" onclick="openModal('privacidad');return false;">Aviso de Privacidad</a></li>
+            <li><a href="#" onclick="openModal('terminos');return false;">Términos y Condiciones</a></li>
+          </ul>
+          <br>
+          <h4>Redes</h4>
+          <ul>
+            <li><a href="https://instagram.com/coralturquesa_souvenirs" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://wa.me/529981890854" data-wa="" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Coral Turquesa Souvenirs. Todos los derechos reservados.</p>
+        <p>Hecho en el Caribe Mexicano 🌴</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ MODAL: LEGAL HUB ═══════════════ -->
+  <div class="modal-overlay" id="modal-legal" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('legal')" aria-label="Cerrar">✕</button>
+      <h2 id="legalTitle">Información Legal</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Coral Turquesa Souvenirs opera de conformidad con la legislación mexicana vigente.</p>
+      <div class="legal-links">
+        <button class="legal-link-card" onclick="closeModal('legal');openModal('privacidad')">
+          <span>🔒</span>
+          <div><h4>Aviso de Privacidad</h4><p>Cómo tratamos y protegemos tus datos personales conforme a la LFPDPPP.</p></div>
+        </button>
+        <button class="legal-link-card" onclick="closeModal('legal');openModal('terminos')">
+          <span>📄</span>
+          <div><h4>Términos y Condiciones</h4><p>Condiciones de compra, envíos, devoluciones y uso de nuestros servicios.</p></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ MODAL: AVISO DE PRIVACIDAD ═══════════════ -->
+  <div class="modal-overlay" id="modal-privacidad" role="dialog" aria-modal="true" aria-labelledby="privTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('privacidad')" aria-label="Cerrar">✕</button>
+      <h2 id="privTitle">Aviso de Privacidad</h2>
+      <p><strong>Última actualización:</strong> 1 de julio de 2026</p>
+
+      <h3>Responsable del tratamiento</h3>
+      <p>Coral Turquesa Souvenirs, con domicilio en el Estado de Quintana Roo, México, es responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento.</p>
+
+      <h3>Datos personales recabados</h3>
+      <p>Recabamos: nombre, empresa o negocio, número telefónico/WhatsApp, ciudad y correo electrónico. No recabamos datos personales sensibles.</p>
+
+      <h3>Finalidades del tratamiento</h3>
+      <p>Sus datos se utilizan para: (i) atender solicitudes de información o cotización; (ii) enviar el catálogo de productos; (iii) procesar y dar seguimiento a pedidos; (iv) emitir facturas cuando sea solicitado.</p>
+
+      <h3>Almacenamiento local (cookies)</h3>
+      <p>Nuestro catálogo en línea guarda tu lista de cotización únicamente en tu propio navegador (almacenamiento local). Esa información no se envía a ningún servidor ni se comparte con terceros, y puedes borrarla en cualquier momento.</p>
+
+      <h3>Transferencia de datos</h3>
+      <p>No compartimos sus datos con terceros sin su consentimiento, salvo cuando sea requerido por ley o para la prestación del servicio de envío del pedido (paqueterías).</p>
+
+      <h3>Derechos ARCO</h3>
+      <p>Puede ejercer sus derechos de Acceso, Rectificación, Cancelación u Oposición contactándonos por WhatsApp o por los medios indicados en la sección de Contacto. Responderemos en un plazo máximo de 20 días hábiles.</p>
+
+      <h3>Cambios al aviso</h3>
+      <p>Nos reservamos el derecho de actualizar este aviso. Las modificaciones se publicarán en esta misma página web.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════ MODAL: TÉRMINOS Y CONDICIONES ═══════════════ -->
+  <div class="modal-overlay" id="modal-terminos" role="dialog" aria-modal="true" aria-labelledby="termTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('terminos')" aria-label="Cerrar">✕</button>
+      <h2 id="termTitle">Términos y Condiciones</h2>
+      <p><strong>Última actualización:</strong> 1 de julio de 2026</p>
+
+      <h3>1. Aceptación</h3>
+      <p>Al realizar un pedido o utilizar los servicios de Coral Turquesa Souvenirs, usted acepta los presentes Términos y Condiciones en su totalidad.</p>
+
+      <h3>2. Pedidos y confirmación</h3>
+      <p>Todo pedido se confirma mediante comunicación expresa por WhatsApp o correo electrónico. El pedido queda firme una vez realizado el pago o anticipo acordado entre las partes.</p>
+
+      <h3>3. Precios y cotizaciones</h3>
+      <p>Los precios son en pesos mexicanos (MXN), aplican para venta de mayoreo y están sujetos a disponibilidad. Toda cotización tiene una vigencia de 7 días naturales a partir de su envío; transcurrido ese plazo, los precios pueden actualizarse.</p>
+
+      <h3>4. Imágenes ilustrativas</h3>
+      <p>Las fotografías del catálogo son ilustrativas. Al tratarse en su mayoría de productos artesanales, pueden existir variaciones razonables de tono, textura o acabado entre piezas.</p>
+
+      <h3>5. Envíos</h3>
+      <p>Realizamos envíos a toda la República Mexicana a través de paqueterías certificadas, con número de rastreo. El costo de envío corre por cuenta del cliente salvo acuerdo distinto. El tiempo de entrega es estimado y puede variar por causas externas.</p>
+
+      <h3>6. Personalización</h3>
+      <p>Los pedidos con personalización no admiten cancelación una vez iniciada la producción. El cliente es responsable de verificar y aprobar el diseño antes de autorizar la producción.</p>
+
+      <h3>7. Devoluciones</h3>
+      <p>Aceptamos devoluciones únicamente por defectos de fabricación comprobables o error en el pedido, dentro de los 5 días hábiles posteriores a la recepción. No se aceptan devoluciones de artículos personalizados salvo defecto comprobable.</p>
+
+      <h3>8. Ley aplicable y jurisdicción</h3>
+      <p>Estos Términos se rigen por las leyes vigentes en los Estados Unidos Mexicanos. Para cualquier controversia, las partes se someten a la jurisdicción de los tribunales competentes del Estado de Quintana Roo. Asimismo, el consumidor puede acudir a la Procuraduría Federal del Consumidor (PROFECO).</p>
+    </div>
+  </div>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/529981890854" data-wa="Hola, vi su página y me interesa hacer un pedido." target="_blank" rel="noopener" class="wa-fab" title="Cotizar por WhatsApp" aria-label="Cotizar por WhatsApp"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg></a>
+
+  <!-- ═══════════════ DATOS + JS ═══════════════ -->
+  <script src="productos.js"></script>
+  <script>
+    // ── Datos de contacto centralizados (el número vive en productos.js)
+    function waUrl(msg) {
+      const num = (typeof CONFIG !== 'undefined' && CONFIG.whatsapp) || '529981890854';
+      return 'https://wa.me/' + num + (msg ? '?text=' + encodeURIComponent(msg) : '');
+    }
+    document.querySelectorAll('a[data-wa]').forEach(a => { a.href = waUrl(a.dataset.wa || ''); });
+
+    // El correo aparece solo si está escrito en productos.js (CONFIG.email)
+    if (typeof CONFIG !== 'undefined' && CONFIG.email) {
+      const ch = document.getElementById('emailChannel');
+      ch.href = 'mailto:' + CONFIG.email;
+      document.getElementById('emailValue').textContent = CONFIG.email;
+      ch.style.display = 'flex';
+    }
+
+    // ── Menú móvil
+    const toggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!toggle.contains(e.target) && !mobileNav.contains(e.target)) closeNav();
+    });
+    function closeNav() { mobileNav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+
+    // ── Resaltar sección activa en la navegación
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+      navAs.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+      });
+    }, { passive: true });
+
+    // ── Aparición suave al hacer scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en, i) => {
+        if (en.isIntersecting) {
+          setTimeout(() => en.target.classList.add('visible'), i * 70);
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+    // ── Acordeón de preguntas frecuentes
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ── Modales
+    function openModal(name) {
+      document.getElementById('modal-' + name).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(name) {
+      document.getElementById('modal-' + name).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.modal-overlay').forEach(o => {
+      o.addEventListener('click', e => {
+        if (e.target === o) { o.classList.remove('open'); document.body.style.overflow = ''; }
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay').forEach(o => o.classList.remove('open'));
+        document.body.style.overflow = '';
+      }
+    });
+
+    // ── Formulario de contacto → WhatsApp
+    function handleForm(e) {
+      e.preventDefault();
+      const f = e.target;
+      const nombre  = f.nombre.value;
+      const empresa = f.empresa.value;
+      const ciudad  = f.ciudad.value;
+      const interes = f.interes.value;
+      const mensaje = f.mensaje.value;
+      const text =
+        `Hola, soy ${nombre}${empresa ? ' de ' + empresa : ''}${ciudad ? ' (' + ciudad + ')' : ''}.\n` +
+        `Me interesa: ${interes || 'información general'}.\n\n${mensaje}`;
+      window.open(waUrl(text), '_blank');
+    }
+  </script>
+
+  <!-- Datos estructurados de preguntas frecuentes (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿Cuál es el pedido mínimo para mayoreo?", "acceptedAnswer": { "@type": "Answer", "text": "Manejamos pedidos mínimos accesibles para todo tipo de negocio. Contáctanos por WhatsApp para conocer las condiciones del artículo que te interese." } },
+      { "@type": "Question", "name": "¿Realizan envíos a toda la República Mexicana?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, enviamos a los 32 estados mediante paqueterías certificadas y con número de rastreo." } },
+      { "@type": "Question", "name": "¿Puedo personalizar los artículos con mi logo o marca?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, podemos incluir tu logo, nombre de marca, colores corporativos y empaque personalizado en la mayoría de nuestros artículos." } },
+      { "@type": "Question", "name": "¿Emiten facturas?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, emitimos CFDI para todos nuestros pedidos." } },
+      { "@type": "Question", "name": "¿Qué formas de pago aceptan?", "acceptedAnswer": { "@type": "Answer", "text": "Transferencia bancaria (SPEI) y depósito. Los datos de pago se envían al confirmar la cotización." } }
+    ]
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Catálogo Mayorista | Coral Turquesa Souvenirs</title>
+  <meta name="description" content="Catálogo mayorista de souvenirs del Caribe Mexicano: más de 160 artículos en 12 categorías. Arma tu lista y recibe tu cotización por WhatsApp el mismo día.">
+  <meta name="theme-color" content="#01696D">
+  <meta property="og:title" content="Catálogo Mayorista | Coral Turquesa Souvenirs">
+  <meta property="og:description" content="Más de 160 souvenirs del Caribe al mayoreo. Arma tu lista y cotiza por WhatsApp el mismo día.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- IMPORTANTE: al publicar el sitio, cambia esta ruta por la URL completa
+       (ej. https://tudominio.com/img/portada.jpg) — las redes sociales no
+       entienden rutas relativas al generar la vista previa del enlace -->
+  <meta property="og:image" content="img/portada.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LENGUAJE DE DISEÑO (ver index.html) ── */
+    :root {
+      --ink: #16262A;
+      --teal: #01696D;
+      --teal-deep: #0C3B3E;
+      --coral: #C8502A;
+      --paper: #FFFFFF;
+      --ivory: #F6F1E7;
+      --sand: #ECE4D3;
+      --line: #DDD3BF;
+      --line-ink: rgba(22,38,42,0.14);
+      --muted: #5D6B6E;
+      --wa: #128C4A;
+      --radius: 3px;
+      --t: 0.22s ease;
+      --nav-h: 72px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Archivo', sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+    h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 5%; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
+    ::selection { background: var(--teal); color: var(--paper); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 20px; border-radius: var(--radius);
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
+      cursor: pointer; border: 1px solid transparent; text-decoration: none;
+      transition: background var(--t), color var(--t), border-color var(--t);
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--ink); color: var(--ivory); }
+    .btn-primary:hover { background: var(--teal); }
+    .btn-ghost { background: transparent; color: var(--ivory); border-color: rgba(246,241,231,0.4); }
+    .btn-ghost:hover { border-color: var(--ivory); }
+    .btn-outline { background: transparent; color: var(--ink); border-color: var(--line-ink); }
+    .btn-outline:hover { border-color: var(--ink); }
+    .btn-sm { padding: 9px 14px; font-size: 0.68rem; }
+
+    .wa-ico { width: 1.25em; height: 1.25em; fill: currentColor; flex-shrink: 0; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(10px);
+      height: var(--nav-h); display: flex; align-items: center;
+      border-bottom: 1px solid var(--line-ink);
+    }
+    .nav-inner {
+      max-width: 1160px; width: 100%; margin: 0 auto;
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .nav-brand { text-decoration: none; display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .nav-logo { position: relative; width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 1px var(--line-ink); }
+    .nav-logo svg { width: 100%; height: 100%; display: block; }
+    .nav-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .nav-brand-name { color: var(--ink); font-family: 'Fraunces', serif; font-size: 1.14rem; font-weight: 600; display: block; line-height: 1.1; }
+    .nav-brand-sub { color: var(--muted); font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; display: block; margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 8px 11px; transition: color var(--t); }
+    .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+    .nav-links .cta-link a {
+      background: var(--ink); color: var(--ivory);
+      padding: 10px 18px; border-radius: var(--radius);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      margin-left: 10px; transition: background var(--t);
+    }
+    .nav-links .cta-link a:hover { background: var(--teal); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); }
+    .nav-mobile {
+      display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+      background: var(--paper); padding: 10px 5% 18px;
+      border-bottom: 1px solid var(--line-ink); z-index: 999;
+    }
+    .nav-mobile.open { display: block; }
+    .nav-mobile a { display: block; color: var(--ink); text-decoration: none; font-size: 0.95rem; font-weight: 500; padding: 13px 0; border-bottom: 1px solid var(--line-ink); }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--teal); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--ivory);
+      border-bottom: 1px solid var(--line);
+      padding: 60px 0 44px;
+      position: relative;
+    }
+    .page-header-dots, .page-wave { display: none; }
+    .page-header-content { position: relative; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 20px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color var(--t); }
+    .breadcrumb a:hover { color: var(--ink); }
+    .breadcrumb span { color: var(--ink); }
+    .page-header h1 { font-size: clamp(2.1rem, 4vw, 3.1rem); color: var(--ink); margin-bottom: 14px; }
+    .page-header p { font-size: 0.98rem; color: var(--muted); max-width: 560px; margin-bottom: 34px; }
+    .page-header-stats { display: flex; gap: 0; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 22px; }
+    .ph-stat { display: flex; flex-direction: column; padding-right: 36px; margin-right: 36px; border-right: 1px solid var(--line); }
+    .ph-stat:last-child { border-right: none; }
+    .ph-stat-n { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 500; color: var(--ink); line-height: 1; }
+    .ph-stat-l { font-size: 0.62rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 7px; }
+    .ph-stat-div { display: none; }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line-ink);
+      position: sticky; top: var(--nav-h); z-index: 900;
+    }
+    .filter-inner {
+      max-width: 1160px; margin: 0 auto; padding: 12px 5%;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .filter-chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; flex: 1; min-width: 0; }
+    .filter-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 13px; border-radius: var(--radius);
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+      cursor: pointer; border: 1px solid var(--line-ink);
+      background: var(--paper); color: var(--muted);
+      white-space: nowrap; text-decoration: none;
+      transition: color var(--t), border-color var(--t), background var(--t);
+    }
+    .filter-chip:hover { border-color: var(--ink); color: var(--ink); }
+    .filter-chip.active { background: var(--ink); border-color: var(--ink); color: var(--ivory); }
+    .filter-chip .chip-icon { display: none; }
+    .filter-search { flex-shrink: 0; }
+    .filter-search input {
+      width: 210px; max-width: 42vw;
+      padding: 9px 14px;
+      border: 1px solid var(--line-ink); border-radius: var(--radius);
+      font-family: 'Archivo', sans-serif; font-size: 0.84rem;
+      color: var(--ink); background: var(--paper);
+      outline: none; transition: border-color var(--t);
+    }
+    .filter-search input:focus { border-color: var(--ink); }
+    .filter-search input::placeholder { color: var(--muted); }
+
+    /* ── HINT BAR ── */
+    .hint-bar {
+      background: var(--sand); color: var(--ink);
+      text-align: center; font-size: 0.8rem; font-weight: 500;
+      padding: 10px 5%;
+    }
+
+    /* ── SECCIONES DE CATÁLOGO ── */
+    .catalog-section { padding: 64px 0 52px; border-bottom: 1px solid var(--line-ink); }
+    .catalog-section:last-of-type { border-bottom: none; }
+    .catalog-section:nth-child(even) { background: var(--ivory); }
+
+    .cat-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 30px; flex-wrap: wrap; gap: 16px; }
+    .cat-header-left { display: flex; align-items: center; gap: 0; }
+    .cat-icon-lg, .ci-1, .ci-2, .ci-3, .ci-4, .ci-5, .ci-6, .ci-7, .ci-8 { display: none; }
+    .cat-header-text h2 { font-size: 1.8rem; color: var(--ink); margin-bottom: 5px; }
+    .cat-header-text p { font-size: 0.86rem; color: var(--muted); }
+    .cat-count {
+      display: inline-block;
+      background: transparent; color: var(--coral);
+      font-family: 'Archivo', sans-serif;
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0; margin-left: 12px; vertical-align: middle;
+    }
+
+    /* ── PRODUCTOS ── */
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+    .product-card {
+      background: var(--paper);
+      border: 1px solid var(--line-ink);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--t);
+    }
+    .product-card:hover { border-color: var(--ink); }
+
+    .product-img {
+      width: 100%; aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--line-ink);
+      background: var(--paper);
+    }
+    .product-emoji { font-size: 38px; }
+    /* La imagen siempre es visible: aparece sobre el emoji al terminar de cargar. */
+    .product-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .product-img.has-photo .product-emoji,
+    .product-img.has-photo .photo-soon { display: none; }
+
+    .photo-soon {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: var(--sand); color: var(--ink);
+      font-size: 0.56rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; text-align: center; padding: 5px;
+    }
+
+    .p-badges { position: absolute; top: 9px; left: 9px; display: flex; gap: 5px; z-index: 2; }
+    .p-badge {
+      padding: 4px 8px; border-radius: var(--radius);
+      font-size: 0.54rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ivory);
+    }
+    .b-new { background: var(--coral); }
+    .b-hot { background: var(--ink); }
+
+    .bg-c1, .bg-c2, .bg-c3, .bg-c4, .bg-c5, .bg-c6, .bg-c7, .bg-c8 { background: var(--ivory); }
+
+    .product-info { padding: 12px 14px 14px; }
+    .product-ref { font-size: 0.6rem; color: var(--coral); font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; display: block; margin-bottom: 4px; }
+    .product-name { font-family: 'Archivo', sans-serif; font-size: 0.86rem; font-weight: 600; color: var(--ink); margin-bottom: 11px; display: block; line-height: 1.4; }
+    .product-actions { display: flex; gap: 6px; }
+
+    .see-more-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-top: 30px; padding-top: 26px;
+      border-top: 1px solid var(--line-ink);
+      flex-wrap: wrap;
+    }
+    .see-more-text { font-size: 0.84rem; color: var(--muted); }
+
+    .no-results { display: none; text-align: center; padding: 72px 5%; color: var(--muted); }
+    .no-results span { font-size: 44px; display: block; margin-bottom: 14px; }
+
+    /* ── CTA FINAL ── */
+    .catalog-cta-section { background: var(--teal-deep); padding: 76px 0; text-align: center; }
+    .catalog-cta-section h2 { color: var(--ivory); margin-bottom: 14px; font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
+    .catalog-cta-section p { color: rgba(246,241,231,0.65); font-size: 0.95rem; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .catalog-cta-section .btn { padding: 15px 26px; font-size: 0.78rem; }
+    .btn-wa { background: var(--wa); color: #fff; }
+    .btn-wa:hover { background: #0E7A3F; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); color: rgba(246,241,231,0.55); padding: 52px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 44px; margin-bottom: 40px; }
+    .footer-brand-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .footer-logo { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 0 1px rgba(246,241,231,0.2); position: relative; }
+    .footer-logo svg { width: 100%; height: 100%; display: block; }
+    .footer-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .footer-brand h3 { font-size: 1.2rem; color: var(--ivory); font-weight: 500; }
+    .footer-brand p { font-size: 0.84rem; line-height: 1.7; max-width: 280px; }
+    .ig-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(246,241,231,0.7); text-decoration: none;
+      font-size: 0.8rem; margin-top: 14px;
+      border: 1px solid rgba(246,241,231,0.18);
+      padding: 8px 13px; border-radius: var(--radius);
+      transition: border-color var(--t), color var(--t);
+    }
+    .ig-link:hover { border-color: rgba(246,241,231,0.5); color: var(--ivory); }
+    .footer-col h4 { font-family: 'Archivo', sans-serif; font-size: 0.64rem; font-weight: 700; color: var(--ivory); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 15px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col a { color: rgba(246,241,231,0.5); text-decoration: none; font-size: 0.84rem; transition: color var(--t); }
+    .footer-col a:hover { color: var(--ivory); }
+    .footer-bottom { border-top: 1px solid rgba(246,241,231,0.12); padding-top: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom p { font-size: 0.75rem; }
+
+    /* ── MODALES ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(22,38,42,0.68); z-index: 2000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: var(--paper); border-radius: var(--radius); padding: 38px; max-width: 640px; width: 100%; max-height: 85vh; overflow-y: auto; position: relative; }
+    .modal-close {
+      position: absolute; top: 14px; right: 14px; width: 32px; height: 32px;
+      border-radius: var(--radius); background: transparent; border: 1px solid var(--line-ink);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--muted); transition: background var(--t), color var(--t);
+    }
+    .modal-close:hover { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+    .modal h2 { font-size: 1.55rem; margin-bottom: 20px; color: var(--ink); }
+    .modal h3 { font-family: 'Archivo', sans-serif; font-size: 0.92rem; font-weight: 700; color: var(--ink); margin: 20px 0 7px; }
+    .modal p { font-size: 0.86rem; color: var(--muted); line-height: 1.75; margin-bottom: 8px; }
+    .legal-links { display: flex; flex-direction: column; gap: 10px; }
+    .legal-link-card {
+      display: flex; align-items: center; gap: 13px; padding: 15px 18px;
+      background: var(--ivory); border: 1px solid var(--line); border-radius: var(--radius);
+      cursor: pointer; text-align: left; width: 100%;
+      transition: border-color var(--t); font-family: 'Archivo', sans-serif;
+    }
+    .legal-link-card:hover { border-color: var(--ink); }
+    .legal-link-card span { font-size: 20px; }
+    .legal-link-card h4 { font-size: 0.88rem; font-weight: 700; color: var(--ink); }
+    .legal-link-card p { font-size: 0.78rem; color: var(--muted); margin-bottom: 0; }
+
+    /* ── FABs ── */
+    .wa-fab {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 54px; height: 54px; background: var(--wa); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 22px rgba(22,38,42,0.28);
+      z-index: 500; text-decoration: none; color: #fff;
+      transition: transform var(--t);
+    }
+    .wa-fab:hover { transform: scale(1.07); }
+    .wa-fab .wa-ico { width: 27px; height: 27px; }
+
+    .quote-fab {
+      position: fixed; bottom: 24px; left: 24px;
+      background: var(--ink); color: var(--ivory);
+      border: none; cursor: pointer;
+      display: none; align-items: center; gap: 10px;
+      padding: 14px 20px; border-radius: var(--radius);
+      font-family: 'Archivo', sans-serif; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      box-shadow: 0 6px 22px rgba(22,38,42,0.28);
+      z-index: 500; transition: background var(--t);
+    }
+    .quote-fab:hover { background: var(--teal); }
+    .quote-badge {
+      background: var(--coral); color: #fff;
+      min-width: 20px; height: 20px; border-radius: 20px; padding: 0 5px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.68rem; font-weight: 700;
+    }
+
+    /* ── COTIZADOR ── */
+    .btn-add { background: var(--ink); color: var(--ivory); }
+    .btn-add:hover { background: var(--teal); }
+    .btn-add.added { background: var(--teal); }
+    @keyframes added-pop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+    .btn-add.pop { animation: added-pop 0.26s ease; }
+
+    .drawer-overlay { display: none; position: fixed; inset: 0; background: rgba(22,38,42,0.5); z-index: 1500; }
+    .drawer-overlay.open { display: block; }
+    .drawer {
+      position: fixed; top: 0; right: -440px; bottom: 0;
+      width: 420px; max-width: 100vw;
+      background: var(--paper); z-index: 1600;
+      display: flex; flex-direction: column;
+      box-shadow: -8px 0 40px rgba(22,38,42,0.2);
+      transition: right 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+    .drawer.open { right: 0; }
+    .drawer-header {
+      padding: 20px 22px; border-bottom: 1px solid var(--line-ink);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--ink);
+    }
+    .drawer-header h3 { font-size: 0.85rem; color: var(--ivory); font-family: 'Archivo', sans-serif; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .drawer-close {
+      width: 30px; height: 30px; border-radius: var(--radius);
+      background: transparent; border: 1px solid rgba(246,241,231,0.3); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; color: var(--ivory); transition: background var(--t);
+    }
+    .drawer-close:hover { background: rgba(246,241,231,0.15); }
+    .drawer-body { flex: 1; overflow-y: auto; padding: 16px 20px; }
+    .quote-empty { text-align: center; padding: 52px 20px; color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
+    .quote-empty-icon { font-size: 44px; display: block; margin-bottom: 14px; }
+    .quote-item { display: flex; align-items: center; gap: 10px; padding: 13px 0; border-bottom: 1px solid var(--line-ink); }
+    .quote-item:last-child { border-bottom: none; }
+    .qi-info { flex: 1; min-width: 0; }
+    .qi-ref { font-size: 0.58rem; color: var(--coral); font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; display: block; }
+    .qi-name { font-size: 0.85rem; font-weight: 600; color: var(--ink); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .qi-controls { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+    .qi-btn {
+      width: 26px; height: 26px; border-radius: var(--radius);
+      border: 1px solid var(--line-ink); background: var(--paper);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: var(--ink);
+      transition: background var(--t), color var(--t), border-color var(--t);
+    }
+    .qi-qty-btn:hover { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+    .qi-qty { min-width: 26px; text-align: center; font-size: 0.88rem; font-weight: 700; color: var(--ink); }
+    .qi-del { color: #B3402A; }
+    .qi-del:hover { background: #B3402A; color: #fff; border-color: #B3402A; }
+    .drawer-footer { padding: 16px 20px; border-top: 1px solid var(--line-ink); display: flex; flex-direction: column; gap: 9px; background: var(--ivory); }
+    .drawer-summary { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .drawer-summary-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .drawer-summary-val { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
+    .drawer-note { font-size: 0.7rem; color: var(--muted); text-align: center; }
+    .btn-send { width: 100%; padding: 14px; font-size: 0.76rem; background: var(--wa); color: #fff; }
+    .btn-send:hover { background: #0E7A3F; }
+    .btn-clear-list { width: 100%; justify-content: center; background: transparent; color: var(--muted); border: 1px solid var(--line-ink); font-size: 0.66rem; padding: 9px; }
+    .btn-clear-list:hover { color: #B3402A; border-color: #B3402A; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-logo { width: 40px; height: 40px; }
+      .nav-brand-name { font-size: 1rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { justify-content: center; text-align: center; }
+      .cat-header { flex-direction: column; align-items: flex-start; }
+      .ph-stat { padding-right: 22px; margin-right: 22px; }
+      /* En móvil la barra sigue la pantalla pero compacta: una sola fila de
+         chips deslizable con el dedo; el degradado del borde derecho insinúa
+         que hay más categorías */
+      .filter-chips {
+        flex-wrap: nowrap; overflow-x: auto;
+        scrollbar-width: none; -webkit-overflow-scrolling: touch;
+        -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 30px), transparent);
+        mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 30px), transparent);
+      }
+      .filter-chips::-webkit-scrollbar { display: none; }
+      .filter-search input { width: 130px; max-width: 36vw; }
+    }
+    @media (max-width: 560px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cta-btns .btn { justify-content: center; width: 100%; max-width: 300px; }
+      .quote-fab { left: 14px; bottom: 18px; padding: 12px 16px; }
+      .wa-fab { right: 14px; bottom: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo oficial de WhatsApp (se reutiliza en todos los botones con <use href="#waIcon">) -->
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+    <symbol id="waIcon" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </symbol>
+  </svg>
+
+  <!-- ═══ NAV ═══ -->
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Coral Turquesa Souvenirs — Inicio">
+        <span class="nav-logo">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="ctgNav" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#14B8B8"/><stop offset="0.55" stop-color="#0D7377"/><stop offset="1" stop-color="#FF6B47"/>
+              </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="30" fill="url(#ctgNav)"/>
+            <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 50 L15 33 Q12 24 17.5 17.5 Q23 11.5 32 11 Q41 11.5 46.5 17.5 Q52 24 49 33 Z" fill="rgba(255,255,255,0.16)"/>
+              <path d="M32 50 L17.5 17.5"/><path d="M32 50 L32 11"/><path d="M32 50 L46.5 17.5"/>
+            </g>
+          </svg>
+          <!-- Si guardas tu logo oficial como img/logo.png, aparecerá aquí automáticamente -->
+          <img src="img/logo.png" alt="" onerror="this.remove()">
+        </span>
+        <span>
+          <span class="nav-brand-name">Coral Turquesa</span>
+          <span class="nav-brand-sub">Souvenirs · Mayoreo</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="catalogo.html" class="active">Catálogo</a></li>
+        <li><a href="index.html#personalizacion">Personalización</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="#" onclick="openModal('legal');return false;">Legal</a></li>
+        <li class="cta-link"><a href="https://wa.me/529981890854" data-wa="Hola, me interesa hacer un pedido mayorista." target="_blank" rel="noopener">Cotizar</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html" onclick="closeNav()">Inicio</a>
+    <a href="catalogo.html" onclick="closeNav()">Catálogo</a>
+    <a href="index.html#personalizacion" onclick="closeNav()">Personalización</a>
+    <a href="index.html#nosotros" onclick="closeNav()">Nosotros</a>
+    <a href="index.html#faq" onclick="closeNav()">Preguntas Frecuentes</a>
+    <a href="index.html#contacto" onclick="closeNav()">Contacto</a>
+    <a href="#" onclick="closeNav();openModal('legal');return false;">Legal</a>
+    <a href="https://wa.me/529981890854" data-wa="Hola, me interesa hacer un pedido mayorista." target="_blank" rel="noopener" style="color:#128C4A;font-weight:700;margin-top:6px;"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg> Cotizar por WhatsApp</a>
+  </div>
+
+  <!-- ═══ PAGE HEADER ═══ -->
+  <header class="page-header">
+    <div class="page-header-dots"></div>
+    <div class="container page-header-content">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <span>Catálogo</span>
+      </div>
+      <h1>Catálogo Mayorista</h1>
+      <p>Más de 160 artículos del Caribe Mexicano con precio de mayoreo. Arma tu lista con «+ Agregar» y envíala por WhatsApp: te cotizamos hoy mismo.</p>
+      <div class="page-header-stats">
+        <div class="ph-stat"><span class="ph-stat-n">+160</span><span class="ph-stat-l">Artículos disponibles</span></div>
+        <div class="ph-stat-div"></div>
+        <div class="ph-stat"><span class="ph-stat-n" id="statCats">12</span><span class="ph-stat-l">Categorías</span></div>
+        <div class="ph-stat-div"></div>
+        <div class="ph-stat"><span class="ph-stat-n">Hoy</span><span class="ph-stat-l">Respuesta a cotizaciones</span></div>
+      </div>
+    </div>
+    <div class="page-wave">
+      <svg viewBox="0 0 1200 55" preserveAspectRatio="none" fill="#F6FBFB" aria-hidden="true">
+        <path d="M0,30 C300,55 600,5 900,30 C1050,42 1150,18 1200,30 L1200,55 L0,55 Z"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ═══ FILTER BAR ═══ -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <div class="filter-chips" id="filterChips"><!-- se genera desde productos.js --></div>
+      <div class="filter-search">
+        <input type="search" id="searchInput" placeholder="🔍 Buscar artículo o clave…" aria-label="Buscar artículo por nombre o clave">
+      </div>
+    </div>
+  </div>
+
+  <div class="hint-bar">💡 Arma tu lista con <strong>«+ Agregar»</strong> y envíala completa por WhatsApp en un clic — sin compromiso.</div>
+
+  <!-- ═══ CATÁLOGO (se genera automáticamente desde productos.js) ═══ -->
+  <main id="catalogRoot"></main>
+
+  <div class="no-results" id="noResults">
+    <span aria-hidden="true">🔍</span>
+    <p>No encontramos artículos con ese nombre.<br>Prueba con otra palabra o <a href="https://wa.me/529981890854" data-wa="Hola, busco un artículo que no encuentro en el catálogo." target="_blank" rel="noopener" style="color:var(--turquesa-dark);font-weight:700;">pregúntanos por WhatsApp</a> — tenemos más de 160 artículos.</p>
+  </div>
+
+  <!-- ═══ CTA FINAL ═══ -->
+  <section class="catalog-cta-section">
+    <div class="container">
+      <h2>¿Listo para surtir tu tienda?</h2>
+      <p>Envíanos tu lista y recibe hoy mismo tu cotización con precios de mayoreo, disponibilidad y costo de envío a tu ciudad.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/529981890854" data-wa="Hola, vi el catálogo y quiero hacer un pedido mayorista." target="_blank" rel="noopener" class="btn btn-wa"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg> Cotizar por WhatsApp</a>
+        <a href="index.html#contacto" class="btn btn-ghost">Ir a Contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-head">
+            <span class="footer-logo">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ctgFoot" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#14B8B8"/><stop offset="0.55" stop-color="#0D7377"/><stop offset="1" stop-color="#FF6B47"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="32" cy="32" r="30" fill="url(#ctgFoot)"/>
+                <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 50 L15 33 Q12 24 17.5 17.5 Q23 11.5 32 11 Q41 11.5 46.5 17.5 Q52 24 49 33 Z" fill="rgba(255,255,255,0.16)"/>
+                  <path d="M32 50 L17.5 17.5"/><path d="M32 50 L32 11"/><path d="M32 50 L46.5 17.5"/>
+                </g>
+              </svg>
+              <img src="img/logo.png" alt="" onerror="this.remove()">
+            </span>
+            <h3>Coral Turquesa Souvenirs</h3>
+          </div>
+          <p>Mayoristas de souvenirs del Caribe Mexicano. Más de 160 artículos, personalización con tu marca y envíos a toda la República.</p>
+          <a href="https://instagram.com/coralturquesa_souvenirs" target="_blank" rel="noopener" class="ig-link">📸 @coralturquesa_souvenirs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="index.html#personalizacion">Personalización</a></li>
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#" onclick="openModal('privacidad');return false;">Aviso de Privacidad</a></li>
+            <li><a href="#" onclick="openModal('terminos');return false;">Términos y Condiciones</a></li>
+          </ul>
+          <br>
+          <h4>Redes</h4>
+          <ul>
+            <li><a href="https://instagram.com/coralturquesa_souvenirs" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://wa.me/529981890854" data-wa="" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Coral Turquesa Souvenirs. Todos los derechos reservados.</p>
+        <p>Hecho en el Caribe Mexicano 🌴</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ MODALES LEGALES ═══ -->
+  <div class="modal-overlay" id="modal-legal" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('legal')" aria-label="Cerrar">✕</button>
+      <h2 id="legalTitle">Información Legal</h2>
+      <p style="margin-bottom:22px;">Coral Turquesa Souvenirs opera conforme a la legislación mexicana vigente.</p>
+      <div class="legal-links">
+        <button class="legal-link-card" onclick="closeModal('legal');openModal('privacidad')">
+          <span>🔒</span><div><h4>Aviso de Privacidad</h4><p>Tratamiento de datos personales conforme a la LFPDPPP.</p></div>
+        </button>
+        <button class="legal-link-card" onclick="closeModal('legal');openModal('terminos')">
+          <span>📄</span><div><h4>Términos y Condiciones</h4><p>Condiciones de compra, envíos y devoluciones.</p></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-privacidad" role="dialog" aria-modal="true" aria-labelledby="privTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('privacidad')" aria-label="Cerrar">✕</button>
+      <h2 id="privTitle">Aviso de Privacidad</h2>
+      <p><strong>Última actualización:</strong> 1 de julio de 2026</p>
+      <h3>Responsable del tratamiento</h3>
+      <p>Coral Turquesa Souvenirs, con domicilio en el Estado de Quintana Roo, México, es responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento.</p>
+      <h3>Datos recabados</h3>
+      <p>Nombre, empresa o negocio, número telefónico/WhatsApp, ciudad y correo electrónico. No recabamos datos personales sensibles.</p>
+      <h3>Finalidades</h3>
+      <p>Atender solicitudes de información o cotización, enviar el catálogo, procesar y dar seguimiento a pedidos y emitir facturas cuando sea solicitado.</p>
+      <h3>Almacenamiento local (cookies)</h3>
+      <p>Esta página guarda tu lista de cotización únicamente en tu propio navegador (almacenamiento local). Esa información no se envía a ningún servidor ni se comparte con terceros; puedes borrarla en cualquier momento vaciando la lista o limpiando los datos de navegación.</p>
+      <h3>Transferencia de datos</h3>
+      <p>No compartimos sus datos con terceros sin su consentimiento, salvo requerimiento legal o para la prestación del servicio de paquetería de su pedido.</p>
+      <h3>Derechos ARCO</h3>
+      <p>Puede ejercer sus derechos de Acceso, Rectificación, Cancelación u Oposición contactándonos por WhatsApp o por los medios indicados en la sección de Contacto. Responderemos en un plazo máximo de 20 días hábiles.</p>
+      <h3>Cambios al aviso</h3>
+      <p>Las modificaciones a este aviso se publicarán en esta misma página web.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-terminos" role="dialog" aria-modal="true" aria-labelledby="termTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('terminos')" aria-label="Cerrar">✕</button>
+      <h2 id="termTitle">Términos y Condiciones</h2>
+      <p><strong>Última actualización:</strong> 1 de julio de 2026</p>
+      <h3>1. Aceptación</h3>
+      <p>Al realizar un pedido o utilizar los servicios de Coral Turquesa Souvenirs, usted acepta estos Términos y Condiciones en su totalidad.</p>
+      <h3>2. Pedidos y confirmación</h3>
+      <p>Todo pedido se confirma por WhatsApp o correo electrónico y queda firme una vez realizado el pago o anticipo acordado entre las partes.</p>
+      <h3>3. Precios y cotizaciones</h3>
+      <p>Los precios son en pesos mexicanos (MXN), aplican para venta de mayoreo y están sujetos a disponibilidad. Toda cotización tiene una vigencia de 7 días naturales a partir de su envío.</p>
+      <h3>4. Imágenes ilustrativas</h3>
+      <p>Las fotografías del catálogo son ilustrativas. Al tratarse en su mayoría de productos artesanales, pueden existir variaciones razonables de tono, textura o acabado entre piezas.</p>
+      <h3>5. Envíos</h3>
+      <p>Enviamos a toda la República Mexicana mediante paqueterías certificadas, con número de rastreo. El costo de envío corre por cuenta del cliente salvo acuerdo distinto. Los tiempos de entrega son estimados y pueden variar por causas ajenas.</p>
+      <h3>6. Personalización</h3>
+      <p>Los pedidos personalizados no admiten cancelación una vez iniciada la producción. El cliente es responsable de verificar y aprobar el diseño antes de autorizar la producción.</p>
+      <h3>7. Devoluciones</h3>
+      <p>Aceptamos devoluciones únicamente por defectos de fabricación comprobables o error en el pedido, dentro de los 5 días hábiles posteriores a la recepción. No aplica en artículos personalizados salvo defecto comprobable.</p>
+      <h3>8. Ley aplicable y jurisdicción</h3>
+      <p>Estos Términos se rigen por las leyes de los Estados Unidos Mexicanos. Para cualquier controversia, las partes se someten a los tribunales competentes del Estado de Quintana Roo. Asimismo, el consumidor puede acudir a la Procuraduría Federal del Consumidor (PROFECO).</p>
+    </div>
+  </div>
+
+  <!-- ═══ COTIZADOR ═══ -->
+  <button class="quote-fab" id="quoteFab" onclick="openDrawer()" aria-label="Abrir mi lista de cotización">
+    📋 Mi Cotización
+    <span class="quote-badge" id="quoteBadge">0</span>
+  </button>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+  <div class="drawer" id="quoteDrawer" role="dialog" aria-label="Mi lista de cotización">
+    <div class="drawer-header">
+      <h3>📋 Mi Cotización</h3>
+      <button class="drawer-close" onclick="closeDrawer()" aria-label="Cerrar lista">✕</button>
+    </div>
+    <div class="drawer-body" id="quoteItems"></div>
+    <div class="drawer-footer">
+      <div class="drawer-summary">
+        <span class="drawer-summary-label">Artículos en cotización</span>
+        <span class="drawer-summary-val" id="quoteTotal">0 artículos</span>
+      </div>
+      <button class="btn btn-send" onclick="sendQuote()"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg> Enviar Cotización por WhatsApp</button>
+      <button class="btn btn-clear-list" onclick="clearQuote()">Vaciar lista</button>
+      <span class="drawer-note">Sin compromiso · Precios y disponibilidad se envían por WhatsApp</span>
+    </div>
+  </div>
+
+  <a href="https://wa.me/529981890854" data-wa="Hola, vi el catálogo y me interesa hacer un pedido." target="_blank" rel="noopener" class="wa-fab" title="Cotizar por WhatsApp" aria-label="Cotizar por WhatsApp"><svg class="wa-ico" aria-hidden="true"><use href="#waIcon"/></svg></a>
+
+  <!-- ═══ DATOS + JS ═══ -->
+  <script src="productos.js"></script>
+  <script>
+    /* ── Utilidades ─────────────────────────────────────────── */
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    }
+    function waUrl(msg) {
+      const num = (typeof CONFIG !== 'undefined' && CONFIG.whatsapp) || '529981890854';
+      return 'https://wa.me/' + num + (msg ? '?text=' + encodeURIComponent(msg) : '');
+    }
+    function norm(s) {
+      return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    }
+
+    /* Enlaces de WhatsApp centralizados: el número vive en productos.js */
+    document.querySelectorAll('a[data-wa]').forEach(a => { a.href = waUrl(a.dataset.wa || ''); });
+
+    /* ── RENDER DEL CATÁLOGO desde productos.js ─────────────── */
+    function renderCatalog() {
+      const root = document.getElementById('catalogRoot');
+      const chipsBox = document.getElementById('filterChips');
+      let chips = '<a href="#" class="filter-chip active" data-chip="todos"><span class="chip-icon">🏝️</span> Todos</a>';
+      let html = '';
+      let catCount = 0;
+
+      CATEGORIAS.forEach((cat, i) => {
+        const items = PRODUCTOS.filter(p => p.cat === cat.id && p.visible !== false);
+        if (!items.length) return;   // categoría sin artículos visibles → no se muestra
+        catCount++;
+        const n = (i % 8) + 1;
+
+        chips += `<a href="#${cat.id}" class="filter-chip" data-chip="${cat.id}"><span class="chip-icon">${cat.emoji}</span> ${esc(cat.nombre)}</a>`;
+
+        const cards = items.map(p => {
+          const badges =
+            (p.nuevo ? '<span class="p-badge b-new">Nuevo</span>' : '') +
+            (p.destacado ? '<span class="p-badge b-hot">★ Popular</span>' : '');
+          return `
+          <div class="product-card" data-ref="${esc(p.ref)}" data-name="${esc(p.nombre)}">
+            <div class="product-img bg-c${n}">
+              ${badges ? `<div class="p-badges">${badges}</div>` : ''}
+              <span class="product-emoji" aria-hidden="true">${p.emoji || '🐚'}</span>
+              <img src="${esc(p.foto || 'img/' + p.ref + '.jpg')}" alt="${esc(p.nombre)}" loading="lazy"
+                   onload="this.parentElement.classList.add('has-photo')"
+                   onerror="ctImgError(this)">
+              <div class="photo-soon">Foto próximamente</div>
+            </div>
+            <div class="product-info">
+              <span class="product-ref">${esc(p.ref)}</span>
+              <span class="product-name">${esc(p.nombre)}</span>
+              <div class="product-actions">
+                <button class="btn btn-add btn-sm" id="btn-${esc(p.ref)}" data-add="${esc(p.ref)}">+ Agregar</button>
+              </div>
+            </div>
+          </div>`;
+        }).join('');
+
+        html += `
+        <section class="catalog-section" id="${cat.id}">
+          <div class="container">
+            <div class="cat-header">
+              <div class="cat-header-left">
+                <div class="cat-icon-lg ci-${n}">${cat.emoji}</div>
+                <div class="cat-header-text">
+                  <h2>${esc(cat.nombre)} <span class="cat-count">${esc(cat.total)} artículos</span></h2>
+                  <p>${esc(cat.desc)}</p>
+                </div>
+              </div>
+              <a href="${waUrl('Hola, me interesa cotizar artículos de ' + cat.nombre + '.')}" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Cotizar esta categoría</a>
+            </div>
+            <div class="product-grid">${cards}</div>
+            <div class="see-more-row">
+              <span class="see-more-text">¿Te interesa esta línea para tu negocio? Cotiza sin compromiso — te respondemos hoy.</span>
+              <a href="${waUrl('Hola, me interesan los artículos de ' + cat.nombre + ' para mi negocio. ¿Me pueden enviar precios de mayoreo?')}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Cotizar por WhatsApp</a>
+            </div>
+          </div>
+        </section>`;
+      });
+
+      root.innerHTML = html;
+      chipsBox.innerHTML = chips;
+      document.getElementById('statCats').textContent = catCount;
+    }
+
+    /* Fotos automáticas: intenta img/REF.jpg, luego img/REF.png, si no hay → emoji.
+       Si ambas fallan, reintenta una vez tras una pausa (cubre fotos que aún se
+       están sincronizando en OneDrive o fallos momentáneos de lectura). */
+    function ctImgError(img) {
+      if (/\.jpg(\?.*)?$/i.test(img.src) && !img.dataset.triedPng) {
+        img.dataset.triedPng = '1';
+        img.src = img.src.replace(/\.jpg(\?.*)?$/i, '.png');
+      } else if (!img.dataset.retried) {
+        img.dataset.retried = '1';
+        const jpg = img.src.replace(/\.png(\?.*)?$/i, '.jpg');
+        setTimeout(() => { img.src = jpg.split('?')[0] + '?r=1'; }, 2000);
+      } else {
+        img.remove();
+      }
+    }
+
+    renderCatalog();
+
+    /* Respaldo: si una foto ya estaba en caché y su evento de carga
+       no llegó a dispararse, márcala como cargada de todos modos */
+    document.querySelectorAll('.product-img img').forEach(img => {
+      if (img.complete && img.naturalWidth > 0) img.parentElement.classList.add('has-photo');
+    });
+
+    /* ── Chips: scroll a la categoría ───────────────────────── */
+    document.getElementById('filterChips').addEventListener('click', e => {
+      const chip = e.target.closest('.filter-chip');
+      if (!chip) return;
+      e.preventDefault();
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const id = chip.dataset.chip;
+      if (id === 'todos') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+      const target = document.getElementById(id);
+      if (target) {
+        /* Deja espacio para la navegación y la barra de filtros (su altura varía según filas de chips) */
+        const bar = document.querySelector('.filter-bar');
+        const sticky = 76 + (getComputedStyle(bar).position === 'sticky' ? bar.offsetHeight : 0) + 14;
+        const top = target.getBoundingClientRect().top + window.scrollY - sticky;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+
+    /* Chip activo según scroll; en móvil (carrusel) el chip activo
+       se desliza solo hacia la vista para que siempre sea visible */
+    let chipActivo = '';
+    window.addEventListener('scroll', () => {
+      const secs = document.querySelectorAll('.catalog-section[id]');
+      let cur = '';
+      secs.forEach(s => { if (window.scrollY >= s.offsetTop - 170) cur = s.id; });
+      const id = cur || 'todos';
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.classList.toggle('active', c.dataset.chip === id);
+      });
+      if (id !== chipActivo) {
+        chipActivo = id;
+        const box = document.getElementById('filterChips');
+        const chip = box.querySelector('.filter-chip.active');
+        if (chip && box.scrollWidth > box.clientWidth + 4) {
+          box.scrollTo({ left: chip.offsetLeft - box.offsetLeft - 14, behavior: 'smooth' });
+        }
+      }
+    }, { passive: true });
+
+    /* ── Buscador ───────────────────────────────────────────── */
+    document.getElementById('searchInput').addEventListener('input', e => {
+      const q = norm(e.target.value.trim());
+      let totalShown = 0;
+      document.querySelectorAll('.catalog-section').forEach(sec => {
+        let shown = 0;
+        sec.querySelectorAll('.product-card').forEach(card => {
+          const ok = !q || norm(card.dataset.ref + ' ' + card.dataset.name).includes(q);
+          card.style.display = ok ? '' : 'none';
+          if (ok) shown++;
+        });
+        sec.style.display = shown ? '' : 'none';
+        const sm = sec.querySelector('.see-more-row');
+        if (sm) sm.style.display = q ? 'none' : '';
+        totalShown += shown;
+      });
+      document.getElementById('noResults').style.display = (q && !totalShown) ? 'block' : 'none';
+    });
+
+    /* ── Menú móvil ─────────────────────────────────────────── */
+    const toggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('navMobile');
+    toggle.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!toggle.contains(e.target) && !mobileNav.contains(e.target)) closeNav();
+    });
+    function closeNav() { mobileNav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+
+    /* ── Modales ────────────────────────────────────────────── */
+    function openModal(name) {
+      document.getElementById('modal-' + name).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(name) {
+      document.getElementById('modal-' + name).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.modal-overlay').forEach(o => {
+      o.addEventListener('click', e => {
+        if (e.target === o) { o.classList.remove('open'); document.body.style.overflow = ''; }
+      });
+    });
+
+    /* ── COTIZADOR ──────────────────────────────────────────── */
+    let quote = [];
+    try { quote = JSON.parse(localStorage.getItem('ct_quote') || '[]'); } catch (e) { quote = []; }
+    /* Sanea lo guardado: solo objetos {ref, name, qty} con tipos correctos */
+    quote = (Array.isArray(quote) ? quote : [])
+      .filter(i => i && typeof i === 'object')
+      .map(i => ({
+        ref:  String(i.ref || ''),
+        name: String(i.name || ''),
+        qty:  Math.min(9999, Math.max(1, parseInt(i.qty, 10) || 1)),
+      }))
+      .filter(i => i.ref);
+
+    /* Botones «+ Agregar», cantidad y eliminar por delegación */
+    document.addEventListener('click', e => {
+      const add = e.target.closest('[data-add]');
+      if (add) { addToQuote(add.dataset.add, add); return; }
+      const qty = e.target.closest('[data-qty]');
+      if (qty) { changeQty(qty.dataset.ref, parseInt(qty.dataset.qty, 10)); return; }
+      const del = e.target.closest('[data-del]');
+      if (del) removeFromQuote(del.dataset.del);
+    });
+
+    function productName(ref) {
+      const p = PRODUCTOS.find(p => p.ref === ref);
+      return p ? p.nombre : ref;
+    }
+
+    function addToQuote(ref, btn) {
+      const existing = quote.find(i => i.ref === ref);
+      if (existing) existing.qty++;
+      else quote.push({ ref, name: productName(ref), qty: 1 });
+      saveQuote(); updateBadge();
+      if (btn) {
+        btn.classList.add('pop', 'added');
+        btn.textContent = '✓ Agregado';
+        setTimeout(() => {
+          btn.classList.remove('pop');
+          const item = quote.find(i => i.ref === ref);
+          btn.textContent = item ? `✓ En lista (${item.qty})` : '+ Agregar';
+        }, 900);
+      }
+    }
+
+    function removeFromQuote(ref) {
+      quote = quote.filter(i => i.ref !== ref);
+      saveQuote(); renderQuote(); updateBadge(); syncButtons();
+    }
+
+    function changeQty(ref, delta) {
+      const item = quote.find(i => i.ref === ref);
+      if (!item) return;
+      item.qty = Math.max(1, item.qty + delta);
+      saveQuote(); renderQuote(); updateBadge();
+      const btn = document.getElementById('btn-' + ref);
+      if (btn) btn.textContent = `✓ En lista (${item.qty})`;
+    }
+
+    function clearQuote() {
+      if (!confirm('¿Vaciar toda la lista de cotización?')) return;
+      quote = [];
+      saveQuote(); renderQuote(); updateBadge(); syncButtons();
+    }
+
+    function saveQuote() { localStorage.setItem('ct_quote', JSON.stringify(quote)); }
+
+    function updateBadge() {
+      const total = quote.reduce((s, i) => s + i.qty, 0);
+      document.getElementById('quoteBadge').textContent = total;
+      document.getElementById('quoteFab').style.display = total > 0 ? 'flex' : 'none';
+      document.getElementById('quoteTotal').textContent = total + (total === 1 ? ' artículo' : ' artículos');
+    }
+
+    function syncButtons() {
+      document.querySelectorAll('.btn-add').forEach(b => {
+        b.classList.remove('added');
+        b.textContent = '+ Agregar';
+      });
+      quote.forEach(item => {
+        const btn = document.getElementById('btn-' + item.ref);
+        if (btn) { btn.classList.add('added'); btn.textContent = `✓ En lista (${item.qty})`; }
+      });
+    }
+
+    function renderQuote() {
+      const box = document.getElementById('quoteItems');
+      if (!quote.length) {
+        box.innerHTML = `
+          <div class="quote-empty">
+            <span class="quote-empty-icon">📋</span>
+            Tu lista está vacía.<br>
+            Explora el catálogo y haz clic en <strong>«+ Agregar»</strong>.
+          </div>`;
+        return;
+      }
+      box.innerHTML = quote.map(item => `
+        <div class="quote-item">
+          <div class="qi-info">
+            <span class="qi-ref">${esc(item.ref)}</span>
+            <span class="qi-name">${esc(item.name)}</span>
+          </div>
+          <div class="qi-controls">
+            <button class="qi-btn qi-qty-btn" data-qty="-1" data-ref="${esc(item.ref)}" aria-label="Reducir cantidad">−</button>
+            <span class="qi-qty">${item.qty}</span>
+            <button class="qi-btn qi-qty-btn" data-qty="1" data-ref="${esc(item.ref)}" aria-label="Aumentar cantidad">+</button>
+            <button class="qi-btn qi-del" data-del="${esc(item.ref)}" aria-label="Quitar de la lista">✕</button>
+          </div>
+        </div>`).join('');
+    }
+
+    function openDrawer() {
+      renderQuote();
+      document.getElementById('quoteDrawer').classList.add('open');
+      document.getElementById('drawerOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      document.getElementById('quoteDrawer').classList.remove('open');
+      document.getElementById('drawerOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function sendQuote() {
+      if (!quote.length) return;
+      const lines = quote.map(i => `• ${i.ref} — ${i.name} | Cantidad: ${i.qty} pza${i.qty > 1 ? 's' : ''}`).join('\n');
+      const msg = `Hola, quisiera cotizar los siguientes artículos de Coral Turquesa Souvenirs:\n\n${lines}\n\n¿Me pueden enviar precios de mayoreo y disponibilidad? Gracias.`;
+      window.open(waUrl(msg), '_blank');
+    }
+
+    /* Escape: cierra cajón o modales */
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      if (document.getElementById('quoteDrawer').classList.contains('open')) { closeDrawer(); return; }
+      document.querySelectorAll('.modal-overlay.open').forEach(o => o.classList.remove('open'));
+      document.body.style.overflow = '';
+    });
+
+    syncButtons();
+    updateBadge();
+  </script>
+</body>
+</html>

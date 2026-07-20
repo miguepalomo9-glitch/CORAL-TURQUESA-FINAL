@@ -1,0 +1,16 @@
+# Coral Turquesa Souvenirs
+# Permitimos a todos los buscadores indexar la página (es un catálogo
+# comercial: queremos aparecer en Google y en los asistentes de IA).
+
+User-agent: *
+Allow: /
+
+# Si algún día quieres impedir que los robots de entrenamiento de IA
+# usen tu contenido, quita el símbolo # de las siguientes líneas.
+# Nota: también dejarías de aparecer en las respuestas de esos asistentes.
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+# User-agent: Google-Extended
+# Disallow: /

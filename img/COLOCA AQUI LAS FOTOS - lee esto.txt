@@ -1,0 +1,17 @@
+En esta carpeta van las fotos del catálogo.
+
+Guarda cada foto con el nombre de la clave del artículo:
+
+   CT-001.jpg   → foto de la "Bolsa de playa tejida"
+   CT-032.png   → foto del "Collar de coral y turquesa"
+   ...y así con cada artículo (sirven .jpg y .png)
+
+La página las detecta automáticamente: no hay que tocar código.
+
+Fotos especiales:
+   logo.png            → tu logo oficial (aparece en toda la página)
+   personalizacion.jpg → ejemplo de mercancía personalizada
+   portada.jpg         → imagen para compartir el sitio en redes
+
+Recomendación: fotos cuadradas, mínimo 800 x 800 píxeles, con buena luz
+y fondo limpio.

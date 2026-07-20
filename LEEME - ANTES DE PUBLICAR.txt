@@ -1,0 +1,55 @@
+════════════════════════════════════════════════════════════════
+  CORAL TURQUESA SOUVENIRS · LISTA ANTES DE PUBLICAR
+════════════════════════════════════════════════════════════════
+
+La página es 100% estática: no tiene servidor propio, base de datos,
+contraseñas ni claves de API (tampoco usa APIs de inteligencia
+artificial). Los datos del cliente nunca salen de su navegador:
+la lista de cotización vive en su propio equipo y el contacto se
+hace directo por WhatsApp. Esto reduce muchísimo la superficie de
+ataque, pero al publicar conviene rematar con lo siguiente.
+
+────────────────────────────────────────────────────────────────
+1) HTTPS OBLIGATORIO
+────────────────────────────────────────────────────────────────
+Publica solo con candado (https://). Netlify, Vercel, Cloudflare
+Pages y GitHub Pages lo dan gratis y automático.
+
+────────────────────────────────────────────────────────────────
+2) ENCABEZADOS DE SEGURIDAD (se configuran en el hosting)
+────────────────────────────────────────────────────────────────
+Agrega estos encabezados HTTP en tu proveedor:
+
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+· En Netlify: crea un archivo llamado  _headers
+· En Vercel: sección "headers" de  vercel.json
+· En Cloudflare Pages: archivo  _headers
+Si me dices qué proveedor usarás, te preparo el archivo exacto.
+
+────────────────────────────────────────────────────────────────
+3) IMAGEN PARA REDES SOCIALES
+────────────────────────────────────────────────────────────────
+En el <head> de index.html y catalogo.html, cambia:
+
+  <meta property="og:image" content="img/portada.jpg">
+
+por la dirección completa con tu dominio:
+
+  <meta property="og:image" content="https://TUDOMINIO.com/img/portada.jpg">
+
+(Las apps de redes sociales no entienden rutas relativas.)
+
+────────────────────────────────────────────────────────────────
+4) DESPUÉS DE PUBLICAR
+────────────────────────────────────────────────────────────────
+· Prueba compartir el enlace por WhatsApp: debe verse la portada.
+· Da de alta el sitio en Google Search Console (gratis) para
+  aparecer en Google y detectar problemas.
+· Verifica el correo en productos.js (CONFIG.email) si quieres
+  mostrarlo en Contacto.
+· Respalda la carpeta completa del sitio de vez en cuando.
